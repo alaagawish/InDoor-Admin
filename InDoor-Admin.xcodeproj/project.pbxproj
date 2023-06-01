@@ -13,9 +13,11 @@
 		617457EA2A2930F7001134E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617457E82A2930F7001134E7 /* Main.storyboard */; };
 		617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617457EB2A2930F8001134E7 /* Assets.xcassets */; };
 		617457EF2A2930F8001134E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617457ED2A2930F8001134E7 /* LaunchScreen.storyboard */; };
+		FDB3AD3838E36D86168865D6 /* Pods_InDoor_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54CC08E1F256AE805EFF8E2F /* Pods-InDoor-Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InDoor-Admin.debug.xcconfig"; path = "Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin.debug.xcconfig"; sourceTree = "<group>"; };
 		617457DF2A2930F7001134E7 /* InDoor-Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InDoor-Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		617457E22A2930F7001134E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		617457E42A2930F7001134E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		617457EB2A2930F8001134E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617457EE2A2930F8001134E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		617457F02A2930F8001134E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E88968C0CB77FE533577E5 /* Pods-InDoor-Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InDoor-Admin.release.xcconfig"; path = "Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin.release.xcconfig"; sourceTree = "<group>"; };
+		F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InDoor_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB3AD3838E36D86168865D6 /* Pods_InDoor_Admin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				617457E12A2930F7001134E7 /* InDoor-Admin */,
 				617457E02A2930F7001134E7 /* Products */,
+				C22C4196AAFC8276CADFDEF5 /* Pods */,
+				F2CA09F3974E7B53C955360A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "InDoor-Admin";
 			sourceTree = "<group>";
 		};
+		C22C4196AAFC8276CADFDEF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54CC08E1F256AE805EFF8E2F /* Pods-InDoor-Admin.debug.xcconfig */,
+				76E88968C0CB77FE533577E5 /* Pods-InDoor-Admin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2CA09F3974E7B53C955360A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 617457F32A2930F8001134E7 /* Build configuration list for PBXNativeTarget "InDoor-Admin" */;
 			buildPhases = (
+				190D1D30977CBA3372A64024 /* [CP] Check Pods Manifest.lock */,
 				617457DB2A2930F7001134E7 /* Sources */,
 				617457DC2A2930F7001134E7 /* Frameworks */,
 				617457DD2A2930F7001134E7 /* Resources */,
+				7E9D8A1563DBD6D819C65042 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		190D1D30977CBA3372A64024 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InDoor-Admin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9D8A1563DBD6D819C65042 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		617457DB2A2930F7001134E7 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		617457F42A2930F8001134E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54CC08E1F256AE805EFF8E2F /* Pods-InDoor-Admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		617457F52A2930F8001134E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E88968C0CB77FE533577E5 /* Pods-InDoor-Admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
