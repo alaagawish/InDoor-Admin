@@ -70,6 +70,49 @@
             </objects>
             <point key="canvasLocation" x="991.60305343511448" y="-27.464788732394368"/>
         </scene>
+        <!--Collection Products View Controller-->
+        <scene sceneID="fHD-Iz-cP9">
+            <objects>
+                <viewController id="J5I-p2-aCa" customClass="CollectionProductsViewController" customModule="InDoor_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6HO-XW-le7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-87-tbX">
+                                <rect key="frame" x="16" y="59" width="361" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IiR-hr-PPx">
+                                <rect key="frame" x="0.0" y="105" width="393" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J5I-p2-aCa" id="9bG-Ad-R5R"/>
+                                    <outlet property="delegate" destination="J5I-p2-aCa" id="j5X-lK-mJM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YuF-gF-BLH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IiR-hr-PPx" firstAttribute="leading" secondItem="YuF-gF-BLH" secondAttribute="leading" id="2iI-3N-xyb"/>
+                            <constraint firstAttribute="bottom" secondItem="IiR-hr-PPx" secondAttribute="bottom" id="CJd-mA-QNA"/>
+                            <constraint firstItem="IiR-hr-PPx" firstAttribute="top" secondItem="klR-87-tbX" secondAttribute="bottom" constant="16" id="K9g-BE-tTl"/>
+                            <constraint firstItem="IiR-hr-PPx" firstAttribute="trailing" secondItem="YuF-gF-BLH" secondAttribute="trailing" id="ONa-2D-Tob"/>
+                            <constraint firstItem="YuF-gF-BLH" firstAttribute="trailing" secondItem="klR-87-tbX" secondAttribute="trailing" constant="16" id="RmU-QI-ueu"/>
+                            <constraint firstItem="klR-87-tbX" firstAttribute="leading" secondItem="YuF-gF-BLH" secondAttribute="leading" constant="16" id="YOa-k8-kKe"/>
+                            <constraint firstItem="klR-87-tbX" firstAttribute="top" secondItem="YuF-gF-BLH" secondAttribute="top" id="cF1-IQ-nfu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionProductsTable" destination="IiR-hr-PPx" id="Rbq-v6-jj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f72-ZT-4bU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881.679389312977" y="-10.563380281690142"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Owq-9M-K6W">
             <objects>
