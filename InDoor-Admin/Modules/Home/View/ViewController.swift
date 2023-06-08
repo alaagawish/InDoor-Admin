@@ -10,9 +10,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var brandsCollection: UICollectionView!
+    var homeViewModel = HomeViewModel(network: ApiHandler())
+    var brands:[SmartCollections] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNibCell()
+        getBrands()
     }
     
     func setupNibCell(){
@@ -20,16 +23,23 @@ class ViewController: UIViewController {
         brandsCollection.register(nib, forCellWithReuseIdentifier: "brandsCell")
     }
     
+    func getBrands(){
+        homeViewModel.getAvailableBrands { [weak self] brandArr in
+            self?.brands = brandArr
+            self?.brandsCollection.reloadData()
+        }
+    }
 }
 
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return brands.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "brandsCell", for: indexPath) as! BrandsCollectionViewCell
+        cell.setBrandData(brand: brands[indexPath.row])
         return cell
     }
     

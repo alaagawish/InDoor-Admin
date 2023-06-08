@@ -25,4 +25,9 @@ class BrandsCollectionViewCell: UICollectionViewCell {
         backgroundColor = .clear
         contentView.backgroundColor = .white
     }
+    
+    func setBrandData(brand:SmartCollections){
+        brandImage.kf.setImage(with: URL(string: brand.image.src))
+        brandName.text = brand.title
+    }
 }
