@@ -13,6 +13,8 @@
 		617457EA2A2930F7001134E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617457E82A2930F7001134E7 /* Main.storyboard */; };
 		617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617457EB2A2930F8001134E7 /* Assets.xcassets */; };
 		617457EF2A2930F8001134E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617457ED2A2930F8001134E7 /* LaunchScreen.storyboard */; };
+		E25A87B92A2CBD0800AE2748 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */; };
+		E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */; };
 		FDB3AD3838E36D86168865D6 /* Pods_InDoor_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		617457EE2A2930F8001134E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		617457F02A2930F8001134E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E88968C0CB77FE533577E5 /* Pods-InDoor-Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InDoor-Admin.release.xcconfig"; path = "Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin.release.xcconfig"; sourceTree = "<group>"; };
+		E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewCell.swift; sourceTree = "<group>"; };
+		E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCollectionViewCell.xib; sourceTree = "<group>"; };
 		F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InDoor_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,9 +67,9 @@
 		617457E12A2930F7001134E7 /* InDoor-Admin */ = {
 			isa = PBXGroup;
 			children = (
+				E25A87BB2A2CD59D00AE2748 /* Modules */,
 				617457E22A2930F7001134E7 /* AppDelegate.swift */,
 				617457E42A2930F7001134E7 /* SceneDelegate.swift */,
-				617457E62A2930F7001134E7 /* ViewController.swift */,
 				617457E82A2930F7001134E7 /* Main.storyboard */,
 				617457EB2A2930F8001134E7 /* Assets.xcassets */,
 				617457ED2A2930F8001134E7 /* LaunchScreen.storyboard */,
@@ -80,8 +84,57 @@
 				54CC08E1F256AE805EFF8E2F /* Pods-InDoor-Admin.debug.xcconfig */,
 				76E88968C0CB77FE533577E5 /* Pods-InDoor-Admin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E25A87BB2A2CD59D00AE2748 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E25A87C22A2CD83B00AE2748 /* Model */,
+				E25A87BF2A2CD69000AE2748 /* RemoteSource */,
+				E25A87BC2A2CD5AB00AE2748 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E25A87BC2A2CD5AB00AE2748 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E25A87BE2A2CD5C800AE2748 /* ViewModel */,
+				E25A87BD2A2CD5B700AE2748 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E25A87BD2A2CD5B700AE2748 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				617457E62A2930F7001134E7 /* ViewController.swift */,
+				E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */,
+				E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E25A87BE2A2CD5C800AE2748 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E25A87BF2A2CD69000AE2748 /* RemoteSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RemoteSource;
+			sourceTree = "<group>";
+		};
+		E25A87C22A2CD83B00AE2748 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F2CA09F3974E7B53C955360A /* Frameworks */ = {
@@ -154,6 +207,7 @@
 			files = (
 				617457EF2A2930F8001134E7 /* LaunchScreen.storyboard in Resources */,
 				617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */,
+				E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */,
 				617457EA2A2930F7001134E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +263,7 @@
 			files = (
 				617457E72A2930F7001134E7 /* ViewController.swift in Sources */,
 				617457E32A2930F7001134E7 /* AppDelegate.swift in Sources */,
+				E25A87B92A2CBD0800AE2748 /* BrandsCollectionViewCell.swift in Sources */,
 				617457E52A2930F7001134E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
