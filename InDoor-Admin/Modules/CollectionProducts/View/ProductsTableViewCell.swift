@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductsTableViewCell: UITableViewCell {
 
@@ -43,5 +44,12 @@ class ProductsTableViewCell: UITableViewCell {
             frame.size.height -= 2 * 8
             super.frame = frame
         }
+    }
+    
+    func setProductData(product:Product){
+        productName.text = product.title
+        productDescription.text = "\(product.vendor ?? ""), \(product.productType ?? "")"
+        productPrice.text = (product.variants?[0].price ?? "")+"$"
+        productImage.kf.setImage(with: URL(string: product.image?.src ?? ""))
     }
 }
