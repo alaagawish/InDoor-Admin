@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     }
     
     func setupNibCell(){
-        let nib = UINib(nibName: "BrandsCollectionViewCell" , bundle: nil)
-        brandsCollection.register(nib, forCellWithReuseIdentifier: "brandsCell")
+        let nib = UINib(nibName: Constants.cellClassName , bundle: nil)
+        brandsCollection.register(nib, forCellWithReuseIdentifier: Constants.cellName)
     }
     
     func getBrands(){
@@ -38,7 +38,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "brandsCell", for: indexPath) as! BrandsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellName, for: indexPath) as! BrandsCollectionViewCell
         cell.setBrandData(brand: brands[indexPath.row])
         return cell
     }
@@ -49,6 +49,20 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/2-16, height: collectionView.frame.height/4)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let collectionProducts = self.storyboard?.instantiateViewController(identifier: Constants.collectionProductsStroyBoardName) as! CollectionProductsViewController
+        collectionProducts.brand = brands[indexPath.row]
+        self.navigationController?.pushViewController(collectionProducts, animated: true)
+    }
+}
+
+extension ViewController{
+    class Constants{
+        static var cellName = "brandsCell"
+        static var cellClassName = "BrandsCollectionViewCell"
+        static var collectionProductsStroyBoardName = "collectionProducts"
     }
 }
 
