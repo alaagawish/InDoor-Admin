@@ -30,6 +30,8 @@
 		E2FE46072A3374C30051B27A /* CollectionProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE46062A3374C30051B27A /* CollectionProductsViewModel.swift */; };
 		E2FE460C2A33A4050051B27A /* AllProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE460B2A33A4050051B27A /* AllProductsViewController.swift */; };
 		E2FE460F2A33C8CE0051B27A /* AllProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE460E2A33C8CE0051B27A /* AllProductsViewModel.swift */; };
+		E2FE464C2A347B960051B27A /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = E2FE464B2A347B960051B27A /* ImageSlideshow */; };
+		E2FE464E2A347B960051B27A /* ImageSlideshow/Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E2FE464D2A347B960051B27A /* ImageSlideshow/Kingfisher */; };
 		FDB3AD3838E36D86168865D6 /* Pods_InDoor_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB3AD3838E36D86168865D6 /* Pods_InDoor_Admin.framework in Frameworks */,
+				E2FE464E2A347B960051B27A /* ImageSlideshow/Kingfisher in Frameworks */,
+				E2FE464C2A347B960051B27A /* ImageSlideshow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +260,10 @@
 			dependencies = (
 			);
 			name = "InDoor-Admin";
+			packageProductDependencies = (
+				E2FE464B2A347B960051B27A /* ImageSlideshow */,
+				E2FE464D2A347B960051B27A /* ImageSlideshow/Kingfisher */,
+			);
 			productName = "InDoor-Admin";
 			productReference = 617457DF2A2930F7001134E7 /* InDoor-Admin.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +292,9 @@
 				Base,
 			);
 			mainGroup = 617457D62A2930F7001134E7;
+			packageReferences = (
+				E2FE464A2A347B960051B27A /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
+			);
 			productRefGroup = 617457E02A2930F7001134E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -590,6 +601,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2FE464A2A347B960051B27A /* XCRemoteSwiftPackageReference "ImageSlideshow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zvonicek/ImageSlideshow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2FE464B2A347B960051B27A /* ImageSlideshow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2FE464A2A347B960051B27A /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow;
+		};
+		E2FE464D2A347B960051B27A /* ImageSlideshow/Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2FE464A2A347B960051B27A /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow/Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 617457D72A2930F7001134E7 /* Project object */;
 }
