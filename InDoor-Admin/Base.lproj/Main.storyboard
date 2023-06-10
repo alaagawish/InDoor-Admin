@@ -4,13 +4,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Brands-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InDoor_Admin" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,6 +62,7 @@
                             <constraint firstItem="rxF-j0-MJg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p0b-gz-yad"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Brands" image="brand" id="xY6-kw-GLL"/>
                     <navigationItem key="navigationItem" id="3di-P4-x9c"/>
                     <connections>
                         <outlet property="brandsCollection" destination="xTX-JO-Vwb" id="gd4-ZE-xoT"/>
@@ -68,7 +70,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991.60305343511448" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1962.5954198473282" y="-376.05633802816902"/>
+        </scene>
+        <!--All products-->
+        <scene sceneID="pJS-hI-pHY">
+            <objects>
+                <viewController id="k2h-X6-v38" customClass="AllProductsViewController" customModule="InDoor_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJx-kv-epX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J95-WM-QNb">
+                                <rect key="frame" x="16" y="75" width="361" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-iJ-fo2">
+                                <rect key="frame" x="0.0" y="121" width="393" height="731"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="k2h-X6-v38" id="Ynu-I9-fD1"/>
+                                    <outlet property="delegate" destination="k2h-X6-v38" id="g65-f9-jVc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MEv-6k-uqb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ag1-iJ-fo2" secondAttribute="bottom" id="F1A-Pr-n3c"/>
+                            <constraint firstItem="Ag1-iJ-fo2" firstAttribute="trailing" secondItem="MEv-6k-uqb" secondAttribute="trailing" id="H2L-6W-uZf"/>
+                            <constraint firstItem="Ag1-iJ-fo2" firstAttribute="leading" secondItem="MEv-6k-uqb" secondAttribute="leading" id="LVt-UO-0Ej"/>
+                            <constraint firstItem="J95-WM-QNb" firstAttribute="top" secondItem="MEv-6k-uqb" secondAttribute="top" constant="16" id="N1j-WC-FXl"/>
+                            <constraint firstItem="J95-WM-QNb" firstAttribute="leading" secondItem="MEv-6k-uqb" secondAttribute="leading" constant="16" id="ZgE-m2-hIe"/>
+                            <constraint firstItem="Ag1-iJ-fo2" firstAttribute="top" secondItem="J95-WM-QNb" secondAttribute="bottom" constant="16" id="gNN-77-tfl"/>
+                            <constraint firstItem="MEv-6k-uqb" firstAttribute="trailing" secondItem="J95-WM-QNb" secondAttribute="trailing" constant="16" id="rTh-bw-L2i"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="All products" id="gi5-nb-cQ2">
+                        <imageReference key="image" image="list.bullet" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="allProductsTable" destination="Ag1-iJ-fo2" id="4rv-nH-x6m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRM-2K-FC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962.5954198473282" y="369.71830985915494"/>
         </scene>
         <!--Collection Products View Controller-->
         <scene sceneID="fHD-Iz-cP9">
@@ -129,7 +183,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1881.679389312977" y="-10.563380281690142"/>
+            <point key="canvasLocation" x="2808.3969465648852" y="-10.563380281690142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Owq-9M-K6W">
@@ -142,18 +196,45 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Vh-nh-sUY"/>
+                        <segue destination="Q1e-Kd-ULX" kind="relationship" relationship="rootViewController" id="5Ea-s5-TAu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6P-9y-b78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-27.464788732394368"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FfV-PI-Bes">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Q1e-Kd-ULX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qn8-H6-eQL"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZIF-2V-dP8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9Pv-ma-dLf"/>
+                        <segue destination="k2h-X6-v38" kind="relationship" relationship="viewControllers" id="nVX-pn-f2s"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5BP-hh-Cig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035.8778625954199" y="-3.5211267605633805"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="200" height="200"/>
+        <image name="brand" width="30" height="30"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
