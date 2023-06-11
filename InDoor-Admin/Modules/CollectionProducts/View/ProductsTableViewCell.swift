@@ -10,6 +10,7 @@ import Kingfisher
 
 class ProductsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var stockState: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productDescription: UILabel!
@@ -46,10 +47,25 @@ class ProductsTableViewCell: UITableViewCell {
         }
     }
     
-    func setProductData(product:Product){
+    func setProductData(product: Product){
         productName.text = product.title
         productDescription.text = "\(product.vendor ?? ""), \(product.productType ?? "")"
         productPrice.text = (product.variants?[0].price ?? "")+"$"
         productImage.kf.setImage(with: URL(string: product.image?.src ?? ""))
+        let stockAmount = calculateInventoryCount(product: product)
+        if stockAmount > 0 {
+            stockState.text = "\(stockAmount) In Stock"
+        }else{
+            stockState.text = "Not Available"
+        }
+        
+    }
+    
+    func calculateInventoryCount(product: Product) -> Int{
+        var totalInventoryCount = 0
+        for variant in product.variants! {
+            totalInventoryCount += variant.inventoryQuantity ?? 0
+        }
+        return totalInventoryCount
     }
 }
