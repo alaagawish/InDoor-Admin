@@ -46,12 +46,19 @@ extension AllProductsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.tableHeight
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productDetailsVC = self.storyboard?.instantiateViewController(identifier:Constants.detailsScreenName) as! ProductDetailsViewController
+        productDetailsVC.product = products[indexPath.row]
+        self.navigationController?.pushViewController(productDetailsVC, animated: true)
+    }
 }
 
 extension AllProductsViewController{
     class Constants{
         static var cellName = "ProductTableViewCell"
         static var cellClassName = "ProductsTableViewCell"
-        static var tableHeight = 170.0
+        static var tableHeight = 200.0
+        static var detailsScreenName = "productDetails"
     }
 }
