@@ -9,11 +9,11 @@ import Foundation
 
 struct Options: Codable {
 
-    let id: Int?
-    let productId: Int?
-    let name: String?
-    let position: Int?
-    let values: [String]?
+    var id: Int?
+    var productId: Int?
+    var name: String?
+    var position: Int?
+    var values: [String]?
 
     private enum CodingKeys: String, CodingKey {
         case id = "id"

@@ -8,9 +8,9 @@ import Foundation
 
 struct RootClass: Codable {
 
-	let smartCollections: [SmartCollections]?
-    let products: [Product]?
-    let product: Product?
+    var smartCollections: [SmartCollections]?
+    var products: [Product]?
+    var product: Product?
 
 	private enum CodingKeys: String, CodingKey {
 		case smartCollections = "smart_collections"

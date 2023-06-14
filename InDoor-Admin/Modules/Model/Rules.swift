@@ -8,9 +8,9 @@ import Foundation
 
 struct Rules: Codable {
 
-	let column: String
-	let relation: String
-	let condition: String
+    var column: String
+    var relation: String
+    var condition: String
 
 	private enum CodingKeys: String, CodingKey {
 		case column = "column"
