@@ -10,8 +10,20 @@ import UIKit
 
 class ProductSizeCollectionDelegatesHandling:NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    var sizeArr:[String] = []
     var viewController:ProductDetailsViewController!
+    var sizeArr:[String] = []{
+        willSet{
+//            for index in sizeArr.indices{
+//                self.collectionView(viewController.sizeCollectionView, didDeselectItemAt: IndexPath(row: index, section: 0))
+//                
+//            }
+//            self.viewController.sizeCollectionView.reloadData()
+//            for index in viewController.colorCollectionHandler.colorArr.indices{
+//                self.viewController.colorCollectionHandler.collectionView(self.viewController.colorCollectionView, didDeselectItemAt: IndexPath(row: index, section: 0))
+//            }
+//            self.viewController.colorCollectionView.reloadData()
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sizeArr.count
@@ -20,6 +32,11 @@ class ProductSizeCollectionDelegatesHandling:NSObject, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellName, for: indexPath) as! SIzeCollectionViewCell
         cell.setData(size: sizeArr[indexPath.row])
+        if viewController.selectedSize == sizeArr[indexPath.row]{
+            cell.addBorderAndRemoveShadow()
+        }else{
+            cell.elevateCellAndRemoveBorder()
+        }
         return cell
     }
     
@@ -28,24 +45,14 @@ class ProductSizeCollectionDelegatesHandling:NSObject, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.shadowRadius = 0.0
-        cell?.layer.shadowColor = UIColor.gray.cgColor
-        cell?.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        cell?.layer.shadowOpacity = 0.0
         viewController.selectedSize = sizeArr[indexPath.row]
-        cell?.contentView.layer.borderWidth = 4
-        cell?.contentView.layer.borderColor = UIColor.black.cgColor
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.addBorderAndRemoveShadow()
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.shadowRadius = 5.0
-        cell?.layer.shadowColor = UIColor.gray.cgColor
-        cell?.layer.shadowOffset = CGSize(width: 3.3, height: 5.7)
-        cell?.layer.shadowOpacity = 0.7
-        cell?.contentView.layer.borderWidth = 0
-        cell?.contentView.layer.borderColor = UIColor.white.cgColor
+        cell?.elevateCellAndRemoveBorder()
     }
 }
 
