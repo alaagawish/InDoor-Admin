@@ -15,6 +15,9 @@ class AllProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNibCell()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getProducts()
     }
     
