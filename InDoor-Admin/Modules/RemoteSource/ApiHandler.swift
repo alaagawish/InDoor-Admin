@@ -10,42 +10,22 @@ import Alamofire
 
 
 protocol ApiService{
-    func getData(url:String,completionHandler: @escaping(RootClass?) -> Void)
-    func updateProduct(method:HTTPMethod, url:String, parameters: Parameters)
+    func handleProduct<T:Codable>(method: HTTPMethod, parameters:Parameters, url:String,completionHandler: @escaping(T?) -> Void)
 }
 class ApiHandler:ApiService{
     
-    func getData(url:String, completionHandler: @escaping(RootClass?) -> Void){
-        let headers:HTTPHeaders = ["X-Shopify-Access-Token": "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"]
+    func handleProduct<T:Codable>(method: HTTPMethod, parameters:Parameters, url:String, completionHandler: @escaping(T?) -> Void){
+        let headers:HTTPHeaders = [Constants.accessTokenHeader: Constants.accessKey]
         let url = URL(string: url)!
-        AF.request(url,method: .get, headers: headers).response { response in
+        AF.request(url,method: method, parameters: parameters, headers: headers).response { response in
             switch response.result{
             case .success(let data):
                 do{
-                    let result = try JSONDecoder().decode(RootClass.self, from: data!)
+                    let result = try JSONDecoder().decode(T.self, from: data ?? Data())
                     completionHandler(result)
                 }catch let error{
                     print(error.localizedDescription)
                     completionHandler(nil)
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
-    func updateProduct(method:HTTPMethod, url:String, parameters: Parameters){
-        let headers:HTTPHeaders = ["X-Shopify-Access-Token": "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"
-        ]
-        let url = URL(string: url)!
-        AF.request(url,method: method,parameters: parameters, encoding:URLEncoding.httpBody , headers: headers).response{ response in
-            switch response.result {
-            case .success(let data):
-                do{
-                    let result = try JSONDecoder().decode(RootClass.self, from: data!)
-                    print("updated")
-                }catch let error{
-                    print(error.localizedDescription)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
