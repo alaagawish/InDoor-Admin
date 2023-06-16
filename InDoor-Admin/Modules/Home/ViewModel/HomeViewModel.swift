@@ -16,7 +16,7 @@ class HomeViewModel{
     }
     func getAvailableBrands(completionHandler: @escaping ([SmartCollections]) -> Void){
         let url = "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/smart_collections.json"
-        network.getData(url: url) { allBrands in
+        network.handleProduct(method: .get, parameters: [:], url: url) { (allBrands:RootClass?) in
             completionHandler(allBrands?.smartCollections ?? [])
         }
     }
