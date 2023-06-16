@@ -9,7 +9,7 @@ import Foundation
 
 struct Product: Codable {
 
-    var id: Int
+    var id: Int?
     var title: String?
     var bodyHtml: String?
     var vendor: String?
@@ -18,7 +18,7 @@ struct Product: Codable {
     var handle: String?
     var updatedAt: String?
     var publishedAt: String?
-    //let templateSuffix: Any
+    var templateSuffix: String?
     var status: String?
     var publishedScope: String?
     var tags: String?
@@ -38,7 +38,7 @@ struct Product: Codable {
         case handle = "handle"
         case updatedAt = "updated_at"
         case publishedAt = "published_at"
-    //    case templateSuffix = "template_suffix"
+        case templateSuffix = "template_suffix"
         case status = "status"
         case publishedScope = "published_scope"
         case tags = "tags"
