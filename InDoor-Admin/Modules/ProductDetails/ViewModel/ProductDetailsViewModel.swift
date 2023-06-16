@@ -14,23 +14,23 @@ class ProductDetailsViewModel{
         self.network = network
     }
     
+    func addProduct(product: Product){
+        let url = "\(Constants.rootUrl)/\(Constants.urlQueryProducts)\(Constants.urlExtension)"
+        network.handleProduct(method: .post, parameters: Converter.encodeToJson(objectClass:RootClass(product: product))!, url: url) { (_:RootClass?) in
+        }
+    }
+    
     func updateProduct(product:Product, imagesToDelete:[Image]) {
-        let url = "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/products/\(product.id).json"
-        network.updateProduct(method: .put, url: url, parameters: Converter.encodeToJson(objectClass: RootClass(product:product))!)
+        let url = "\(Constants.rootUrl)/\(Constants.urlQueryProducts)/\(product.id!)\(Constants.urlExtension)"
+        network.handleProduct(method: .put, parameters: Converter.encodeToJson(objectClass: RootClass(product:product))!, url: url) { (_:RootClass?) in}
         updateImages(product: product,imagesToDelete: imagesToDelete)
     }
     
     func updateImages(product:Product, imagesToDelete:[Image]){
         for image in imagesToDelete {
             if(image.id != nil){
-                let url = "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/products/\(product.id)/images/\(image.id!).json"
-                network.updateProduct(method: .delete, url: url, parameters: Converter.encodeToJson(objectClass: image)!)
-            }
-        }
-        for image in product.images!{
-            if(image.id != nil){
-                let url = "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/products/\(product.id)/images/\(image.id!).json"
-                network.updateProduct(method: .put, url: url, parameters: Converter.encodeToJson(objectClass: image)!)
+                let url = "\(Constants.rootUrl)/\(Constants.urlQueryProducts)/\(product.id!)/\(Constants.urlQueryImages)/\(image.id!)\(Constants.urlExtension)"
+                network.handleProduct(method: .delete, parameters: Converter.encodeToJson(objectClass: image)!, url: url) { (_:RootClass?) in}
             }
         }
     }

@@ -28,7 +28,7 @@ extension ProductDetailsViewController {
     
     @IBAction func doneEditingTitleAndVendor(_ sender: Any) {
         if titleEditText.text!.isEmpty || vendorEditText.text!.isEmpty || typeEditText.text!.isEmpty {
-            presentAlert(title: "Error", message: "Please Fill All Fields")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.emptyFields)
         }else{
             product.title = titleEditText.text
             product.vendor = vendorEditText.text

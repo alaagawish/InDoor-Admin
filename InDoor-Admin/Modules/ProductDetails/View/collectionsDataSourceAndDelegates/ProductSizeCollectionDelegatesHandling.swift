@@ -11,19 +11,7 @@ import UIKit
 class ProductSizeCollectionDelegatesHandling:NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var viewController:ProductDetailsViewController!
-    var sizeArr:[String] = []{
-        willSet{
-//            for index in sizeArr.indices{
-//                self.collectionView(viewController.sizeCollectionView, didDeselectItemAt: IndexPath(row: index, section: 0))
-//                
-//            }
-//            self.viewController.sizeCollectionView.reloadData()
-//            for index in viewController.colorCollectionHandler.colorArr.indices{
-//                self.viewController.colorCollectionHandler.collectionView(self.viewController.colorCollectionView, didDeselectItemAt: IndexPath(row: index, section: 0))
-//            }
-//            self.viewController.colorCollectionView.reloadData()
-        }
-    }
+    var sizeArr:[String] = []
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sizeArr.count

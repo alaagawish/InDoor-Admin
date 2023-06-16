@@ -40,16 +40,16 @@ extension ProductDetailsViewController {
     @IBAction func doneAddingVariant(_ sender: Any) {
         let variantName = "\(addVariantSizeTextField.text!) / \(addVariantColorTextField.text!)"
         if checkForEmptyFields() {
-            presentAlert(title: "Error", message: "Please Fill All Fields")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.emptyFields)
         }else if checkFieldsValidity(){
-            presentAlert(title: "Error", message: "Wrong input for price or quantity")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.wrongPriceOrQuantity)
         }else if checkDuplicatedVariant(variantName: variantName) {
-            presentAlert(title: "Error", message: "Variant Already Exists")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.duplicatedVariant)
         }else{
             addVariantToProduct(variantName:variantName)
             checkAndAddOptions()
-            price.text = "Select Size"
-            stockCount.text = "Select Size"
+            price.text = Constants.selectSize
+            stockCount.text = Constants.selectSize
             initializeUI()
             selectedSize = nil
             selectedColor = nil

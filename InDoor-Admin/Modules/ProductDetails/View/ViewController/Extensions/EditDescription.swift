@@ -25,7 +25,7 @@ extension ProductDetailsViewController {
     
     @IBAction func doneEdititingDescription(_ sender: Any) {
         if descriptionEditText.text!.isEmpty {
-            presentAlert(title: "Error", message: "Description Can't be Empty")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.emptyDescription)
         }else{
             product.bodyHtml = descriptionEditText.text
             descriptionOverlayView.isHidden = true

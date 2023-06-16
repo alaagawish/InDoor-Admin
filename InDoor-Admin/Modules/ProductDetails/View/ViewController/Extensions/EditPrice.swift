@@ -11,22 +11,22 @@ extension ProductDetailsViewController{
     
     @IBAction func editPrice(_ sender: Any) {
         if selectedSize == nil || selectedColor == nil {
-            presentAlert(title: "Notice", message: "Please select color and size first")
+            InstructionAlert.presentAlert(vc: self, title: Constants.notice, message: Constants.selectSizeAndColor)
         }else{
             if editPriceTextField.isHidden {
                 editPriceTextField.isHidden = false
-                editPriceButton.setImage(UIImage(systemName: "checkmark.diamond.fill"), for: .normal)
+                editPriceButton.setImage(UIImage(systemName: Constants.checkMarkDiamondImage), for: .normal)
             }else{
                 if editPriceTextField.text!.isEmpty {
                     editPriceTextField.isHidden = true
-                    editPriceButton.setImage(UIImage(systemName: "pencil.line"), for: .normal)
+                    editPriceButton.setImage(UIImage(systemName: Constants.pencilEditImage), for: .normal)
                 }else{
                     if Double(editPriceTextField.text ?? "") != nil {
                         if Double(editPriceTextField.text!) == 0.0 {
-                            presentAlert(title: "Error", message: "Price Can't be set to zero")
+                            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.zeroPrice)
                         }else{
                             editPriceTextField.isHidden = true
-                            editPriceButton.setImage(UIImage(systemName: "pencil.line"), for: .normal)
+                            editPriceButton.setImage(UIImage(systemName: Constants.pencilEditImage), for: .normal)
                             let variantName = "\(selectedSize!) / \(selectedColor!)"
                             for variant in product.variants!.indices{
                                 if product.variants![variant].title! == variantName{
@@ -37,7 +37,7 @@ extension ProductDetailsViewController{
                             }
                         }
                     }else{
-                        presentAlert(title: "Error", message: "Please enter valid Price")
+                        InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.validPrice)
                     }
                 }
             }

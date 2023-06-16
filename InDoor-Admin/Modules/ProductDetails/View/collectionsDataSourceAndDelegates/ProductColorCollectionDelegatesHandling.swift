@@ -17,10 +17,6 @@ class ProductColorCollectionDelegatesHandling:NSObject, UICollectionViewDelegate
                 self.collectionView(viewController.colorCollectionView, didDeselectItemAt: IndexPath(row: index, section: 0))
             }
             self.viewController.colorCollectionView.reloadData()
-//            for index in viewController.sizeCollectionHandler.sizeArr.indices {
-//                self.viewController.sizeCollectionHandler.collectionView(self.viewController.sizeCollectionView, didDeselectItemAt: IndexPath(row: index, section: 0))
-//            }
-//            self.viewController.sizeCollectionView.reloadData()
         }
     }
     
@@ -39,7 +35,7 @@ class ProductColorCollectionDelegatesHandling:NSObject, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if viewController.selectedSize != nil{
+        if viewController.selectedSize != nil {
             viewController.selectedColor = colorArr[indexPath.row]
             let cell = collectionView.cellForItem(at: indexPath)
             cell?.addBorderAndRemoveShadow()

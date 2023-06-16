@@ -15,15 +15,15 @@ class CollectionProductsViewModel{
     }
     
     func getPrdouctsOfSpecificBrand(brandID:String, completionHandler: @escaping ([Product]) -> Void){
-        let url =  "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/collections/\(brandID)/products.json"
-        network.getData(url: url) { allProducts in
+        let url =  "\(Constants.rootUrl)/\(Constants.urlQueryCollections)/\(brandID)/\(Constants.urlQueryProducts)\(Constants.urlExtension)"
+        network.handleProduct(method: .get, parameters: [:], url: url) { (allProducts:RootClass?) in
             completionHandler(allProducts?.products ?? [])
         }
     }
     
     func getSpecificProduct(productID:String, completionHandler: @escaping (Product) -> Void){
-        let url =  "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/products/\(productID).json"
-        network.getData(url: url) { response in
+        let url =  "\(Constants.rootUrl)/\(Constants.urlQueryProducts)/\(productID)\(Constants.urlExtension)"
+        network.handleProduct(method: .get, parameters: [:], url: url) { (response:RootClass?) in
             completionHandler((response?.product)!)
         }
     }

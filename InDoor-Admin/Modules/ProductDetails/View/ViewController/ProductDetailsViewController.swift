@@ -8,9 +8,14 @@
 import UIKit
 import ImageSlideshow
 import ImageSlideshowKingfisher
+import Cosmos
+import Lottie
 
 class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
     
+    @IBOutlet weak var doneAnimation: LottieAnimationView!
+    @IBOutlet weak var rating: CosmosView!
+    @IBOutlet weak var saveProductButton: UIButton!
     @IBOutlet weak var deleteImageButton: UIButton!
     @IBOutlet weak var addVariantOverlayView: UIView!
     @IBOutlet weak var addVariantQuantityTextField: UITextField!
@@ -39,6 +44,7 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productImagesSlider: ImageSlideshow!
     @IBOutlet weak var colorCollectionView: UICollectionView!
+    var newProduct = false
     var productImagesArr: [InputSource] = []
     var imagesToDelete:[Image] = []
     var product:Product!
@@ -58,22 +64,13 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
             colorCollectionHandler.colorArr = tempColorArr
             colorCollectionView.reloadData()
             if selectedSize != nil{
-                price.text = "Select Color"
-                stockCount.text = "Select Color"
+                price.text = Constants.selectColor
+                stockCount.text = Constants.selectColor
             }
-//            checkPriceAndAvailability()
         }
     }
     var selectedColor: String!{
         didSet{
-//            var tempSizeArr:[String] = []
-//            for variant in product.variants! {
-//                if variant.option2 == selectedColor{
-//                    tempSizeArr.append(variant.option1!)
-//                }
-//            }
-//            sizeCollectionHandler.sizeArr = tempSizeArr
-//            sizeCollectionView.reloadData()
             checkPriceAndAvailability()
         }
     }
@@ -84,14 +81,25 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
         initializeUI()
     }
     
+    func animateDone(){
+        doneAnimation.isHidden = false
+        doneAnimation.contentMode = .scaleAspectFit
+        doneAnimation.loopMode = .playOnce
+        doneAnimation.play { done in
+            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     func prepareProductImagesArr(){
         for image in product.images!{
             productImagesArr.append(KingfisherSource(url: URL(string: image.src ?? "")!))
         }
     }
     
-    
     func initializeUI(){
+        saveProductButton.giveShadowAndRadius(shadowRadius: 10, cornerRadius: 10)
+        rating.rating = Double(product.templateSuffix ?? "1.5") ?? 1.5
         prepareSizeCollection()
         prepareColorCollection()
         startSlider()
@@ -101,7 +109,6 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
         sizeCollectionView.reloadData()
         colorCollectionView.reloadData()
     }
-    
     
     func prepareSizeCollection(){
         sizeCollectionHandler.viewController = self
@@ -141,16 +148,16 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
                     foundVariant = true
                     price.text = "\(variant.price!)$"
                     if variant.inventoryQuantity == nil || variant.inventoryQuantity == 0 {
-                        stockCount.text = "Not Available"
+                        stockCount.text = Constants.notAvailable
                     }else{
-                        stockCount.text = "\(variant.inventoryQuantity!) In Stock"
+                        stockCount.text = "\(variant.inventoryQuantity!) \(Constants.inStock)"
                     }
                     return
                 }
             }
             if foundVariant == false {
-                price.text = "Select options"
-                stockCount.text = "Select options"
+                price.text = Constants.selectOptions
+                stockCount.text = Constants.selectOptions
                 selectedSize = nil
                 selectedColor = nil
                 sizeCollectionHandler.sizeArr = product.options?[0].values ?? []
@@ -160,17 +167,17 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
     }
     
     @IBAction func goBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    func presentAlert(title: String, message: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "ok", style: .default)
-        alert.addAction(action)
-        self.present(alert , animated: true)
+        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveProduct(_ sender: Any) {
-        productDetailsViewModel.updateProduct(product: product, imagesToDelete: imagesToDelete)
+        product.templateSuffix = String(rating.rating)
+        if newProduct{
+            productDetailsViewModel.addProduct(product: product)
+        }else{
+            productDetailsViewModel.updateProduct(product: product, imagesToDelete: imagesToDelete)
+        }
+        animateDone()
     }
 }

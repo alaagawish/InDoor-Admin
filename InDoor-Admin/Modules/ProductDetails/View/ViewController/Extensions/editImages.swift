@@ -18,7 +18,7 @@ extension ProductDetailsViewController{
     
     @IBAction func showImage(_ sender: Any) {
         if editImageUrl.text!.isEmpty {
-            presentAlert(title: "Error", message: "Enter Url to display the image")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.enterImageURL)
         }else{
             editImageImageView.kf.setImage(with: URL(string: editImageUrl.text))
         }
@@ -26,9 +26,9 @@ extension ProductDetailsViewController{
     
     @IBAction func saveImage(_ sender: Any) {
         if editImageUrl.text!.isEmpty {
-            presentAlert(title: "Error", message: "Enter Url to display the image")
+            InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.enterImageURL)
         }else{
-            if addImageOrEdit == "add" {
+                if addImageOrEdit == Constants.add {
                 product.images?.append(Image(src: editImageUrl.text))
             }else{
                 imagesToDelete.append((product.images?[selectedImageIndex])!)
@@ -53,7 +53,7 @@ extension ProductDetailsViewController{
         editImageOverlayView.giveShadowAndRadius(shadowRadius: 5, cornerRadius: 20)
         editImageUrl.giveShadowAndRadius(shadowRadius: 0, cornerRadius: 20)
         editImageUrl.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        addImageOrEdit = "add"
+        addImageOrEdit = Constants.add
         deleteImageButton.isHidden = true
     }
     
@@ -66,13 +66,13 @@ extension ProductDetailsViewController{
         editImageUrl.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         editImageUrl.text = product.images?[productImagesSlider.currentPage].src
         editImageImageView.kf.setImage(with: URL(string: product.images?[productImagesSlider.currentPage].src ?? ""))
-        addImageOrEdit = "edit"
+        addImageOrEdit = Constants.edit
         deleteImageButton.isHidden = false
     }
     
     @IBAction func deleteImage(_ sender: Any) {
-        let alert = UIAlertController(title: "Warning", message: "Are you sure you want to delete this image?", preferredStyle: .alert)
-        let actionDelete = UIAlertAction(title: "Delete", style: .destructive) { _ in
+        let alert = UIAlertController(title: Constants.warning, message: Constants.confirmDeleteImage, preferredStyle: .alert)
+        let actionDelete = UIAlertAction(title: Constants.delete, style: .destructive) { _ in
             self.imagesToDelete.append((self.product.images?[self.selectedImageIndex])!)
             self.product.images?.remove(at: self.selectedImageIndex)
             self.exitImageEditing((Any).self)
@@ -80,7 +80,7 @@ extension ProductDetailsViewController{
             self.prepareProductImagesArr()
             self.initializeUI()
         }
-        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel)
+        let actionCancel = UIAlertAction(title: Constants.cancel, style: .cancel)
         alert.addAction(actionDelete)
         alert.addAction(actionCancel)
         self.present(alert, animated: true)

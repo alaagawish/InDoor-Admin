@@ -12,18 +12,28 @@ class CollectionProductsViewController: UIViewController {
     var responseCount:Int = .zero
     @IBOutlet weak var collectionProductsTable: UITableView!
     var collectionProductsViewModel = CollectionProductsViewModel(network: ApiHandler())
+    var networkIndicator: UIActivityIndicatorView!
     var products:[Product] = []{
         didSet{
             if products.count == responseCount{
                 collectionProductsTable.reloadData()
+                networkIndicator.stopAnimating()
             }
         }
     }
     var brand:SmartCollections!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadIndicator()
         setupNibCell()
         getProducts()
+    }
+    
+    func loadIndicator(){
+        networkIndicator = UIActivityIndicatorView(style: .large)
+        networkIndicator.center = self.view.center
+        self.view.addSubview(networkIndicator)
+        networkIndicator.startAnimating()
     }
     
     func setupNibCell(){
@@ -38,7 +48,7 @@ class CollectionProductsViewController: UIViewController {
         collectionProductsViewModel.getPrdouctsOfSpecificBrand(brandID: String(brand.id)) { [weak self] productsArr in
             self?.responseCount = productsArr.count
             for product in productsArr {
-                self?.collectionProductsViewModel.getSpecificProduct(productID: String(product.id)) { product in
+                self?.collectionProductsViewModel.getSpecificProduct(productID: String(product.id!)) { product in
                     self?.products.append(product)
                 }
             }
