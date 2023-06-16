@@ -15,9 +15,14 @@ class AllProductsViewModel{
     }
     
     func getAllProducts(completionHandler: @escaping ([Product]) -> Void){
-        let url =  "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/products.json"
-        network.getData(url: url) { allProducts in
+        let url =  "\(Constants.rootUrl)/\(Constants.urlQueryProducts)\(Constants.urlExtension)"
+        network.handleProduct(method: .get, parameters: [:], url: url) { (allProducts:RootClass?) in
             completionHandler(allProducts?.products ?? [])
         }
+    }
+    
+    func deleteProduct(product: Product) {
+        let url = "\(Constants.rootUrl)/\(Constants.urlQueryProducts)/\(product.id!)\(Constants.urlExtension)"
+        network.handleProduct(method: .delete, parameters: Converter.encodeToJson(objectClass: product)!, url: url) { (_:RootClass?) in}
     }
 }
