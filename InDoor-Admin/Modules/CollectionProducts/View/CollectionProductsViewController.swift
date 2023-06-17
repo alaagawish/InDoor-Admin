@@ -26,6 +26,9 @@ class CollectionProductsViewController: UIViewController {
         super.viewDidLoad()
         loadIndicator()
         setupNibCell()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getProducts()
     }
     
@@ -53,6 +56,11 @@ class CollectionProductsViewController: UIViewController {
                 }
             }
         }
+    }
+    @IBAction func addProductToCollection(_ sender: Any) {
+        let addProductVC = self.storyboard?.instantiateViewController(withIdentifier: "addProduct") as! AddProductViewController
+        addProductVC.brand = brand
+        self.navigationController?.pushViewController(addProductVC, animated: true)
     }
 }
 

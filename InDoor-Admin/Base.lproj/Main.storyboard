@@ -180,17 +180,37 @@
                                     <outletCollection property="gestureRecognizers" destination="lEH-Yc-yTh" appends="YES" id="e2N-N2-Q6Q"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVL-yp-zw9">
+                                <rect key="frame" x="327" y="752" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rVL-yp-zw9" secondAttribute="height" multiplier="1:1" id="DdS-nA-I8R"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ui0-YO-nKz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background" cornerRadius="25">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addProductToCollection:" destination="J5I-p2-aCa" eventType="touchUpInside" id="pwd-Dd-5qZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YuF-gF-BLH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dmv-Wx-6a9" firstAttribute="top" secondItem="YuF-gF-BLH" secondAttribute="top" id="2a8-5g-NLJ"/>
                             <constraint firstItem="IiR-hr-PPx" firstAttribute="leading" secondItem="YuF-gF-BLH" secondAttribute="leading" id="2iI-3N-xyb"/>
+                            <constraint firstItem="YuF-gF-BLH" firstAttribute="bottom" secondItem="rVL-yp-zw9" secondAttribute="bottom" constant="16" id="62S-4D-p8o"/>
                             <constraint firstItem="dmv-Wx-6a9" firstAttribute="leading" secondItem="YuF-gF-BLH" secondAttribute="leading" constant="8" id="9d3-be-oYj"/>
                             <constraint firstAttribute="bottom" secondItem="IiR-hr-PPx" secondAttribute="bottom" id="CJd-mA-QNA"/>
                             <constraint firstItem="IiR-hr-PPx" firstAttribute="top" secondItem="klR-87-tbX" secondAttribute="bottom" constant="16" id="K9g-BE-tTl"/>
                             <constraint firstItem="IiR-hr-PPx" firstAttribute="trailing" secondItem="YuF-gF-BLH" secondAttribute="trailing" id="ONa-2D-Tob"/>
                             <constraint firstItem="YuF-gF-BLH" firstAttribute="trailing" secondItem="klR-87-tbX" secondAttribute="trailing" constant="16" id="RmU-QI-ueu"/>
+                            <constraint firstItem="rVL-yp-zw9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YuF-gF-BLH" secondAttribute="leading" symbolic="YES" id="WTH-yf-zEZ"/>
+                            <constraint firstItem="YuF-gF-BLH" firstAttribute="trailing" secondItem="rVL-yp-zw9" secondAttribute="trailing" constant="16" id="YIJ-gp-4cz"/>
                             <constraint firstItem="klR-87-tbX" firstAttribute="leading" secondItem="YuF-gF-BLH" secondAttribute="leading" constant="16" id="YOa-k8-kKe"/>
                             <constraint firstItem="klR-87-tbX" firstAttribute="top" secondItem="YuF-gF-BLH" secondAttribute="top" constant="16" id="cF1-IQ-nfu"/>
                             <constraint firstItem="dmv-Wx-6a9" firstAttribute="width" secondItem="YuF-gF-BLH" secondAttribute="width" multiplier="0.1" id="oCm-hu-APd"/>

@@ -45,7 +45,7 @@ extension AddProductViewController {
                 }
             }
             if isDuplicated == false {
-                product.title = titleTextField.text
+                product.title = "\(vendorTextField.text!) | \(titleTextField.text!)"
                 product.vendor = vendorTextField.text
                 product.bodyHtml = descriptionTextField.text
                 product.productType = typeTextField.text

@@ -26,6 +26,7 @@ class AddProductViewController: UIViewController {
     @IBOutlet weak var pageIndicator: UILabel!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    var brand:SmartCollections!
     var allProducts: [Product] = []
     var optionArr = [Options(name: Constants.size, position: 1, values: []),Options(name: Constants.color, position: 2, values: [])]
     var product: Product!
@@ -42,6 +43,10 @@ class AddProductViewController: UIViewController {
     
     func initializeAddProductUI(){
         product = Product( id: nil, title: "", bodyHtml: "", vendor: "", productType: "", createdAt: nil, handle: nil, updatedAt: nil, publishedAt: nil, status: nil, publishedScope: nil, tags: nil, adminGraphqlApiId: nil, variants: [], options: optionArr, images: [], image: nil)
+        if brand != nil {
+            vendorTextField.isEnabled = false
+            vendorTextField.text = brand.title
+        }
         setFirstPageUI()
         setSecondPageUI()
         setThirdPageUI()

@@ -87,7 +87,9 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
         doneAnimation.loopMode = .playOnce
         doneAnimation.play { done in
             self.navigationController?.popViewController(animated: true)
-            self.navigationController?.popViewController(animated: true)
+            if self.newProduct{
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
@@ -168,7 +170,9 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
     
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
-        navigationController?.popViewController(animated: true)
+        if newProduct{
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func saveProduct(_ sender: Any) {
