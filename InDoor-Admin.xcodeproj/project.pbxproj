@@ -46,6 +46,12 @@
 		E2834D332A3E173100767325 /* PriceRuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D322A3E173100767325 /* PriceRuleViewModel.swift */; };
 		E2834D352A3E7E2200767325 /* CRUDPriceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D342A3E7E2200767325 /* CRUDPriceRule.swift */; };
 		E2834D3A2A3E801200767325 /* PriceRuleTableManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D392A3E801200767325 /* PriceRuleTableManagment.swift */; };
+		E2834D3D2A3E83B000767325 /* DiscountCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D3C2A3E83B000767325 /* DiscountCodes.swift */; };
+		E2834D3F2A3E840200767325 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D3E2A3E840200767325 /* Errors.swift */; };
+		E2834D462A3E84A400767325 /* DiscountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D452A3E84A400767325 /* DiscountsViewController.swift */; };
+		E2834D492A3E84C000767325 /* DiscountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D472A3E84C000767325 /* DiscountsTableViewCell.swift */; };
+		E2834D4A2A3E84C000767325 /* DiscountsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2834D482A3E84C000767325 /* DiscountsTableViewCell.xib */; };
+		E2834D4C2A3E890C00767325 /* DiscountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D4B2A3E890C00767325 /* DiscountsViewModel.swift */; };
 		E2FE45E92A3223410051B27A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45E82A3223410051B27A /* HomeViewModel.swift */; };
 		E2FE45EB2A32235D0051B27A /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45EA2A32235D0051B27A /* ApiHandler.swift */; };
 		E2FE45F02A32238A0051B27A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45EC2A32238A0051B27A /* Image.swift */; };
@@ -115,6 +121,12 @@
 		E2834D322A3E173100767325 /* PriceRuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRuleViewModel.swift; sourceTree = "<group>"; };
 		E2834D342A3E7E2200767325 /* CRUDPriceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDPriceRule.swift; sourceTree = "<group>"; };
 		E2834D392A3E801200767325 /* PriceRuleTableManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRuleTableManagment.swift; sourceTree = "<group>"; };
+		E2834D3C2A3E83B000767325 /* DiscountCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCodes.swift; sourceTree = "<group>"; };
+		E2834D3E2A3E840200767325 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		E2834D452A3E84A400767325 /* DiscountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsViewController.swift; sourceTree = "<group>"; };
+		E2834D472A3E84C000767325 /* DiscountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsTableViewCell.swift; sourceTree = "<group>"; };
+		E2834D482A3E84C000767325 /* DiscountsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsTableViewCell.xib; sourceTree = "<group>"; };
+		E2834D4B2A3E890C00767325 /* DiscountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsViewModel.swift; sourceTree = "<group>"; };
 		E2FE45E82A3223410051B27A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E2FE45EA2A32235D0051B27A /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		E2FE45EC2A32238A0051B27A /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -197,6 +209,7 @@
 		E25A87BB2A2CD59D00AE2748 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E2834D422A3E847200767325 /* Discounts */,
 				E2834D282A3DF11900767325 /* PriceRule */,
 				E2834D062A39F38F00767325 /* AddProduct */,
 				E2FE464F2A347D550051B27A /* ProductDetails */,
@@ -247,14 +260,11 @@
 		E25A87C22A2CD83B00AE2748 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2834D412A3E844E00767325 /* SmartCollectionsModel */,
+				E2834D402A3E842600767325 /* ProductModelClasses */,
+				E2834D3B2A3E834500767325 /* DiscountModelClasses */,
 				E2834D192A3DEE6B00767325 /* PriceRuleModelClasses */,
-				E2FE45EC2A32238A0051B27A /* Image.swift */,
 				E2FE45EE2A32238A0051B27A /* RootClass.swift */,
-				E2FE45EF2A32238A0051B27A /* Rules.swift */,
-				E2FE45ED2A32238A0051B27A /* SmartCollections.swift */,
-				E2FE45FD2A3246FF0051B27A /* Options.swift */,
-				E2FE45FF2A3247220051B27A /* Product.swift */,
-				E2FE46012A3247570051B27A /* Variants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +425,62 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		E2834D3B2A3E834500767325 /* DiscountModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D3C2A3E83B000767325 /* DiscountCodes.swift */,
+				E2834D3E2A3E840200767325 /* Errors.swift */,
+			);
+			path = DiscountModelClasses;
+			sourceTree = "<group>";
+		};
+		E2834D402A3E842600767325 /* ProductModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E2FE45EC2A32238A0051B27A /* Image.swift */,
+				E2FE45FD2A3246FF0051B27A /* Options.swift */,
+				E2FE45FF2A3247220051B27A /* Product.swift */,
+				E2FE46012A3247570051B27A /* Variants.swift */,
+			);
+			path = ProductModelClasses;
+			sourceTree = "<group>";
+		};
+		E2834D412A3E844E00767325 /* SmartCollectionsModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2FE45EF2A32238A0051B27A /* Rules.swift */,
+				E2FE45ED2A32238A0051B27A /* SmartCollections.swift */,
+			);
+			path = SmartCollectionsModel;
+			sourceTree = "<group>";
+		};
+		E2834D422A3E847200767325 /* Discounts */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D442A3E848100767325 /* ViewModel */,
+				E2834D432A3E847A00767325 /* View */,
+			);
+			path = Discounts;
+			sourceTree = "<group>";
+		};
+		E2834D432A3E847A00767325 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D452A3E84A400767325 /* DiscountsViewController.swift */,
+				E2834D472A3E84C000767325 /* DiscountsTableViewCell.swift */,
+				E2834D482A3E84C000767325 /* DiscountsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2834D442A3E848100767325 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D4B2A3E890C00767325 /* DiscountsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E2FE45F42A322CB90051B27A /* CollectionProducts */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +629,7 @@
 			files = (
 				617457EF2A2930F8001134E7 /* LaunchScreen.storyboard in Resources */,
 				E2834D142A3BCBEB00767325 /* done.json in Resources */,
+				E2834D4A2A3E84C000767325 /* DiscountsTableViewCell.xib in Resources */,
 				617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */,
 				E2FE45FB2A322D940051B27A /* ProductsTableViewCell.xib in Resources */,
 				E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */,
@@ -627,12 +694,14 @@
 				617457E72A2930F7001134E7 /* ViewController.swift in Sources */,
 				E2834CF32A39066B00767325 /* Converter.swift in Sources */,
 				E2834D302A3E021C00767325 /* PriceRuleTableViewCell.swift in Sources */,
+				E2834D462A3E84A400767325 /* DiscountsViewController.swift in Sources */,
 				E2834D3A2A3E801200767325 /* PriceRuleTableManagment.swift in Sources */,
 				E2FE45FE2A3246FF0051B27A /* Options.swift in Sources */,
 				E2834D242A3DEF1C00767325 /* PrerequisiteToEntitlementQuantityRatio.swift in Sources */,
 				E2FE45EB2A32235D0051B27A /* ApiHandler.swift in Sources */,
 				617457E32A2930F7001134E7 /* AppDelegate.swift in Sources */,
 				E2FE46522A347D770051B27A /* ProductDetailsViewController.swift in Sources */,
+				E2834D4C2A3E890C00767325 /* DiscountsViewModel.swift in Sources */,
 				E2834CF12A3905E800767325 /* ProductDetailsViewModel.swift in Sources */,
 				E2834D012A39323400767325 /* EditDescription.swift in Sources */,
 				E2834D252A3DEF1C00767325 /* PrerequisiteToEntitlementPurchase.swift in Sources */,
@@ -653,6 +722,8 @@
 				E2FE45F72A322CE90051B27A /* CollectionProductsViewController.swift in Sources */,
 				E2834CFB2A39285F00767325 /* EditTitleAndVendor.swift in Sources */,
 				E2FE46542A3497250051B27A /* SIzeCollectionViewCell.swift in Sources */,
+				E2834D3D2A3E83B000767325 /* DiscountCodes.swift in Sources */,
+				E2834D3F2A3E840200767325 /* Errors.swift in Sources */,
 				E2834D102A3B044D00767325 /* addDetails.swift in Sources */,
 				617457E52A2930F7001134E7 /* SceneDelegate.swift in Sources */,
 				E2834D332A3E173100767325 /* PriceRuleViewModel.swift in Sources */,
@@ -671,6 +742,7 @@
 				E2FE46002A3247220051B27A /* Product.swift in Sources */,
 				E2FE465A2A34A8E60051B27A /* ColorCollectionViewCell.swift in Sources */,
 				E2834CF92A3927F900767325 /* editImages.swift in Sources */,
+				E2834D492A3E84C000767325 /* DiscountsTableViewCell.swift in Sources */,
 				E2834D222A3DEF1C00767325 /* PrerequisiteSubtotalRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

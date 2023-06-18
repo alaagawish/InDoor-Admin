@@ -14,6 +14,7 @@ class Constants {
     static let urlQueryCollections = "collections"
     static let urlQueryImages = "images"
     static let urlQueryPriceRules = "price_rules"
+    static let urlQueryDiscountCodes = "discount_codes"
     static let accessTokenHeader = "X-Shopify-Access-Token"
     static let accessKey = "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"
     static let selectColor = "Select Color"
