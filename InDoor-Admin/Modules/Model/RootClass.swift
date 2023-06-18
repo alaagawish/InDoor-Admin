@@ -13,8 +13,12 @@ struct RootClass: Codable {
     var product: Product?
     var priceRules: [PriceRule]?
     var priceRule: PriceRule?
+    var discountCodes: [DiscountCodes]?
+    var discountCode: DiscountCodes?
 
 	private enum CodingKeys: String, CodingKey {
+        case discountCode = "discount_code"
+        case discountCodes = "discount_codes"
         case priceRules = "price_rules"
 		case smartCollections = "smart_collections"
         case products = "products"
