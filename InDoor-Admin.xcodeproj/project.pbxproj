@@ -33,6 +33,19 @@
 		E2834D142A3BCBEB00767325 /* done.json in Resources */ = {isa = PBXBuildFile; fileRef = E2834D132A3BCBEA00767325 /* done.json */; };
 		E2834D162A3C4C5C00767325 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D152A3C4C5C00767325 /* Constants.swift */; };
 		E2834D182A3C4F4F00767325 /* InstructionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D172A3C4F4F00767325 /* InstructionAlert.swift */; };
+		E2834D212A3DEF1C00767325 /* EntitledCountryIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D1A2A3DEF1B00767325 /* EntitledCountryIds.swift */; };
+		E2834D222A3DEF1C00767325 /* PrerequisiteSubtotalRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D1B2A3DEF1B00767325 /* PrerequisiteSubtotalRange.swift */; };
+		E2834D232A3DEF1C00767325 /* PriceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D1C2A3DEF1B00767325 /* PriceRule.swift */; };
+		E2834D242A3DEF1C00767325 /* PrerequisiteToEntitlementQuantityRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D1D2A3DEF1C00767325 /* PrerequisiteToEntitlementQuantityRatio.swift */; };
+		E2834D252A3DEF1C00767325 /* PrerequisiteToEntitlementPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D1E2A3DEF1C00767325 /* PrerequisiteToEntitlementPurchase.swift */; };
+		E2834D262A3DEF1C00767325 /* PrerequisiteQuantityRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D1F2A3DEF1C00767325 /* PrerequisiteQuantityRange.swift */; };
+		E2834D272A3DEF1C00767325 /* PrerequisiteShippingPriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D202A3DEF1C00767325 /* PrerequisiteShippingPriceRange.swift */; };
+		E2834D2D2A3DF18200767325 /* PriceRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D2C2A3DF18200767325 /* PriceRuleViewController.swift */; };
+		E2834D302A3E021C00767325 /* PriceRuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D2E2A3E021C00767325 /* PriceRuleTableViewCell.swift */; };
+		E2834D312A3E021C00767325 /* PriceRuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2834D2F2A3E021C00767325 /* PriceRuleTableViewCell.xib */; };
+		E2834D332A3E173100767325 /* PriceRuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D322A3E173100767325 /* PriceRuleViewModel.swift */; };
+		E2834D352A3E7E2200767325 /* CRUDPriceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D342A3E7E2200767325 /* CRUDPriceRule.swift */; };
+		E2834D3A2A3E801200767325 /* PriceRuleTableManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D392A3E801200767325 /* PriceRuleTableManagment.swift */; };
 		E2FE45E92A3223410051B27A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45E82A3223410051B27A /* HomeViewModel.swift */; };
 		E2FE45EB2A32235D0051B27A /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45EA2A32235D0051B27A /* ApiHandler.swift */; };
 		E2FE45F02A32238A0051B27A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45EC2A32238A0051B27A /* Image.swift */; };
@@ -89,6 +102,19 @@
 		E2834D132A3BCBEA00767325 /* done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = done.json; sourceTree = "<group>"; };
 		E2834D152A3C4C5C00767325 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2834D172A3C4F4F00767325 /* InstructionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionAlert.swift; sourceTree = "<group>"; };
+		E2834D1A2A3DEF1B00767325 /* EntitledCountryIds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntitledCountryIds.swift; sourceTree = "<group>"; };
+		E2834D1B2A3DEF1B00767325 /* PrerequisiteSubtotalRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrerequisiteSubtotalRange.swift; sourceTree = "<group>"; };
+		E2834D1C2A3DEF1B00767325 /* PriceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceRule.swift; sourceTree = "<group>"; };
+		E2834D1D2A3DEF1C00767325 /* PrerequisiteToEntitlementQuantityRatio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrerequisiteToEntitlementQuantityRatio.swift; sourceTree = "<group>"; };
+		E2834D1E2A3DEF1C00767325 /* PrerequisiteToEntitlementPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrerequisiteToEntitlementPurchase.swift; sourceTree = "<group>"; };
+		E2834D1F2A3DEF1C00767325 /* PrerequisiteQuantityRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrerequisiteQuantityRange.swift; sourceTree = "<group>"; };
+		E2834D202A3DEF1C00767325 /* PrerequisiteShippingPriceRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrerequisiteShippingPriceRange.swift; sourceTree = "<group>"; };
+		E2834D2C2A3DF18200767325 /* PriceRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRuleViewController.swift; sourceTree = "<group>"; };
+		E2834D2E2A3E021C00767325 /* PriceRuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRuleTableViewCell.swift; sourceTree = "<group>"; };
+		E2834D2F2A3E021C00767325 /* PriceRuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceRuleTableViewCell.xib; sourceTree = "<group>"; };
+		E2834D322A3E173100767325 /* PriceRuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRuleViewModel.swift; sourceTree = "<group>"; };
+		E2834D342A3E7E2200767325 /* CRUDPriceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDPriceRule.swift; sourceTree = "<group>"; };
+		E2834D392A3E801200767325 /* PriceRuleTableManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRuleTableManagment.swift; sourceTree = "<group>"; };
 		E2FE45E82A3223410051B27A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E2FE45EA2A32235D0051B27A /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		E2FE45EC2A32238A0051B27A /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -171,6 +197,7 @@
 		E25A87BB2A2CD59D00AE2748 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E2834D282A3DF11900767325 /* PriceRule */,
 				E2834D062A39F38F00767325 /* AddProduct */,
 				E2FE464F2A347D550051B27A /* ProductDetails */,
 				E2FE46092A33A3D40051B27A /* AllProducts */,
@@ -220,6 +247,7 @@
 		E25A87C22A2CD83B00AE2748 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2834D192A3DEE6B00767325 /* PriceRuleModelClasses */,
 				E2FE45EC2A32238A0051B27A /* Image.swift */,
 				E2FE45EE2A32238A0051B27A /* RootClass.swift */,
 				E2FE45EF2A32238A0051B27A /* Rules.swift */,
@@ -318,6 +346,73 @@
 				E2834D112A3B04FB00767325 /* navigation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2834D192A3DEE6B00767325 /* PriceRuleModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D1A2A3DEF1B00767325 /* EntitledCountryIds.swift */,
+				E2834D1F2A3DEF1C00767325 /* PrerequisiteQuantityRange.swift */,
+				E2834D202A3DEF1C00767325 /* PrerequisiteShippingPriceRange.swift */,
+				E2834D1B2A3DEF1B00767325 /* PrerequisiteSubtotalRange.swift */,
+				E2834D1E2A3DEF1C00767325 /* PrerequisiteToEntitlementPurchase.swift */,
+				E2834D1D2A3DEF1C00767325 /* PrerequisiteToEntitlementQuantityRatio.swift */,
+				E2834D1C2A3DEF1B00767325 /* PriceRule.swift */,
+			);
+			path = PriceRuleModelClasses;
+			sourceTree = "<group>";
+		};
+		E2834D282A3DF11900767325 /* PriceRule */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D2B2A3DF16D00767325 /* ViewModel */,
+				E2834D292A3DF16000767325 /* View */,
+			);
+			path = PriceRule;
+			sourceTree = "<group>";
+		};
+		E2834D292A3DF16000767325 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D382A3E7FE800767325 /* cell */,
+				E2834D362A3E7FCE00767325 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2834D2B2A3DF16D00767325 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D322A3E173100767325 /* PriceRuleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2834D362A3E7FCE00767325 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D372A3E7FDE00767325 /* Extensions */,
+				E2834D2C2A3DF18200767325 /* PriceRuleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E2834D372A3E7FDE00767325 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D342A3E7E2200767325 /* CRUDPriceRule.swift */,
+				E2834D392A3E801200767325 /* PriceRuleTableManagment.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E2834D382A3E7FE800767325 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E2834D2E2A3E021C00767325 /* PriceRuleTableViewCell.swift */,
+				E2834D2F2A3E021C00767325 /* PriceRuleTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		E2FE45F42A322CB90051B27A /* CollectionProducts */ = {
@@ -471,6 +566,7 @@
 				617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */,
 				E2FE45FB2A322D940051B27A /* ProductsTableViewCell.xib in Resources */,
 				E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */,
+				E2834D312A3E021C00767325 /* PriceRuleTableViewCell.xib in Resources */,
 				617457EA2A2930F7001134E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,35 +620,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2834D212A3DEF1C00767325 /* EntitledCountryIds.swift in Sources */,
 				E2834D052A3932D800767325 /* AddVariant.swift in Sources */,
 				E2834D0E2A3B043900767325 /* addVariant.swift in Sources */,
 				E2FE45F02A32238A0051B27A /* Image.swift in Sources */,
 				617457E72A2930F7001134E7 /* ViewController.swift in Sources */,
 				E2834CF32A39066B00767325 /* Converter.swift in Sources */,
+				E2834D302A3E021C00767325 /* PriceRuleTableViewCell.swift in Sources */,
+				E2834D3A2A3E801200767325 /* PriceRuleTableManagment.swift in Sources */,
 				E2FE45FE2A3246FF0051B27A /* Options.swift in Sources */,
+				E2834D242A3DEF1C00767325 /* PrerequisiteToEntitlementQuantityRatio.swift in Sources */,
 				E2FE45EB2A32235D0051B27A /* ApiHandler.swift in Sources */,
 				617457E32A2930F7001134E7 /* AppDelegate.swift in Sources */,
 				E2FE46522A347D770051B27A /* ProductDetailsViewController.swift in Sources */,
 				E2834CF12A3905E800767325 /* ProductDetailsViewModel.swift in Sources */,
 				E2834D012A39323400767325 /* EditDescription.swift in Sources */,
+				E2834D252A3DEF1C00767325 /* PrerequisiteToEntitlementPurchase.swift in Sources */,
 				E2834D182A3C4F4F00767325 /* InstructionAlert.swift in Sources */,
 				E2FE45F22A32238A0051B27A /* RootClass.swift in Sources */,
 				E2834D0C2A3B042B00767325 /* addImage.swift in Sources */,
 				E2FE460F2A33C8CE0051B27A /* AllProductsViewModel.swift in Sources */,
+				E2834D2D2A3DF18200767325 /* PriceRuleViewController.swift in Sources */,
+				E2834D272A3DEF1C00767325 /* PrerequisiteShippingPriceRange.swift in Sources */,
 				E2834D032A39329600767325 /* DeleteAlerts.swift in Sources */,
 				E25A87B92A2CBD0800AE2748 /* BrandsCollectionViewCell.swift in Sources */,
 				E2FE46022A3247570051B27A /* Variants.swift in Sources */,
 				E2FE46562A3497E60051B27A /* ProductSizeCollectionDelegatesHandling.swift in Sources */,
 				E2FE46072A3374C30051B27A /* CollectionProductsViewModel.swift in Sources */,
 				E2FE45E92A3223410051B27A /* HomeViewModel.swift in Sources */,
+				E2834D262A3DEF1C00767325 /* PrerequisiteQuantityRange.swift in Sources */,
 				E2834D162A3C4C5C00767325 /* Constants.swift in Sources */,
 				E2FE45F72A322CE90051B27A /* CollectionProductsViewController.swift in Sources */,
 				E2834CFB2A39285F00767325 /* EditTitleAndVendor.swift in Sources */,
 				E2FE46542A3497250051B27A /* SIzeCollectionViewCell.swift in Sources */,
 				E2834D102A3B044D00767325 /* addDetails.swift in Sources */,
 				617457E52A2930F7001134E7 /* SceneDelegate.swift in Sources */,
+				E2834D332A3E173100767325 /* PriceRuleViewModel.swift in Sources */,
 				E2834D092A39F3BC00767325 /* AddProductViewController.swift in Sources */,
 				E2FE45FA2A322D940051B27A /* ProductsTableViewCell.swift in Sources */,
+				E2834D232A3DEF1C00767325 /* PriceRule.swift in Sources */,
 				E2834D122A3B04FB00767325 /* navigation.swift in Sources */,
 				E2FE45F12A32238A0051B27A /* SmartCollections.swift in Sources */,
 				E2FE460C2A33A4050051B27A /* AllProductsViewController.swift in Sources */,
@@ -560,10 +666,12 @@
 				E2834CEE2A38AB1B00767325 /* Extensions.swift in Sources */,
 				E2FE46582A34A8260051B27A /* ProductColorCollectionDelegatesHandling.swift in Sources */,
 				E2834CFD2A39295400767325 /* EditPrice.swift in Sources */,
+				E2834D352A3E7E2200767325 /* CRUDPriceRule.swift in Sources */,
 				E2FE45F32A32238A0051B27A /* Rules.swift in Sources */,
 				E2FE46002A3247220051B27A /* Product.swift in Sources */,
 				E2FE465A2A34A8E60051B27A /* ColorCollectionViewCell.swift in Sources */,
 				E2834CF92A3927F900767325 /* editImages.swift in Sources */,
+				E2834D222A3DEF1C00767325 /* PrerequisiteSubtotalRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
