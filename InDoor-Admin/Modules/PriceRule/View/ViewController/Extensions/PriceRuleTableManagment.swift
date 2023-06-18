@@ -48,7 +48,9 @@ extension PriceRuleViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let discountVC = self.storyboard?.instantiateViewController(withIdentifier: "discountPage") as! DiscountsViewController
+        discountVC.priceRule = rulesList[indexPath.row]
+        self.navigationController?.pushViewController(discountVC, animated: true)
     }
     
     func prepareForEdit(index: Int){
