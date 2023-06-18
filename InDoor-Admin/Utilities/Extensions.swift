@@ -9,14 +9,12 @@ import UIKit
 
 extension UIView {
     func giveShadowAndRadius(scale: Bool = true, shadowRadius:Int, cornerRadius:Int) {
-        //layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.7
         layer.shadowOffset = .zero
         layer.shadowRadius = CGFloat(integerLiteral: shadowRadius)
         layer.shouldRasterize = true
         layer.cornerRadius = CGFloat(integerLiteral: cornerRadius)
-     //   layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }
 
@@ -59,4 +57,17 @@ extension UICollectionViewCell {
         contentView.layer.borderWidth = 4
         contentView.layer.borderColor = UIColor.black.cgColor
     }
+}
+
+extension ISO8601DateFormatter {
+    convenience init(_ formatOptions: Options) {
+        self.init()
+        self.formatOptions = formatOptions
+    }
+}
+extension Formatter {
+    static let iso8601 = ISO8601DateFormatter([.withInternetDateTime])
+}
+extension Date {
+    var iso8601: String { return Formatter.iso8601.string(from: self) }
 }
