@@ -53,7 +53,7 @@ extension AddProductViewController {
             if checkPriceValidity(){
                 if checkQuantityValidity(){
                     if checkVariantIsGenuine(){
-                        let variant = Variants(title: "\(sizeTextField.text!) / \(colorTextField.text!)",price:priceTextField.text!, option1: sizeTextField.text!, option2: colorTextField.text!, inventoryQuantity: Int(quantityTextField.text!), oldInventoryQuantity: Int(quantityTextField.text!))
+                        let variant = Variants(title: "\(sizeTextField.text!) / \(colorTextField.text!)",price:priceTextField.text!,inventoryManagement: "shopify", option1: sizeTextField.text!, option2: colorTextField.text!, inventoryQuantity: Int(quantityTextField.text!), oldInventoryQuantity: Int(quantityTextField.text!))
                         product.variants?.append(variant)
                         checkAndAddOptions()
                         return true

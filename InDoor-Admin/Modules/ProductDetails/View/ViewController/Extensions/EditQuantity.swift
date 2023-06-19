@@ -28,6 +28,7 @@ extension ProductDetailsViewController{
                         for variant in product.variants!.indices{
                             if product.variants![variant].title! == variantName{
                                 product.variants![variant].inventoryQuantity = Int(editQuantityTextField.text!)
+                                product.variants![variant].oldInventoryQuantity = Int(editQuantityTextField.text!)
                                 if Int(editQuantityTextField.text!) == 0 {
                                     showDeleteAlert(index: variant)
                                     stockCount.text = Constants.notAvailable

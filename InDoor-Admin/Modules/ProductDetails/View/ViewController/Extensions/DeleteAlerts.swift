@@ -30,7 +30,8 @@ extension ProductDetailsViewController {
     func showDeletetProductAlert(){
         let alert = UIAlertController(title: Constants.warning, message: Constants.deleteProductInsteadOfVariant, preferredStyle: .alert)
         let deleteAction = UIAlertAction(title: Constants.delete, style: .destructive) { [weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
+            self?.productDetailsViewModel.deleteProduct(product: (self?.product)!)
+            self?.animateDone()
         }
         let cancelAction = UIAlertAction(title: Constants.cancel, style: .default)
         alert.addAction(deleteAction)

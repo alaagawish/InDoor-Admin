@@ -52,6 +52,8 @@
 		E2834D492A3E84C000767325 /* DiscountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D472A3E84C000767325 /* DiscountsTableViewCell.swift */; };
 		E2834D4A2A3E84C000767325 /* DiscountsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2834D482A3E84C000767325 /* DiscountsTableViewCell.xib */; };
 		E2834D4C2A3E890C00767325 /* DiscountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834D4B2A3E890C00767325 /* DiscountsViewModel.swift */; };
+		E2D65C362A3F5AEE0093AFBB /* InventoryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D65C352A3F5AEE0093AFBB /* InventoryLevel.swift */; };
+		E2D65C382A3F62BC0093AFBB /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D65C372A3F62BC0093AFBB /* InventoryItem.swift */; };
 		E2FE45E92A3223410051B27A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45E82A3223410051B27A /* HomeViewModel.swift */; };
 		E2FE45EB2A32235D0051B27A /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45EA2A32235D0051B27A /* ApiHandler.swift */; };
 		E2FE45F02A32238A0051B27A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE45EC2A32238A0051B27A /* Image.swift */; };
@@ -127,6 +129,8 @@
 		E2834D472A3E84C000767325 /* DiscountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsTableViewCell.swift; sourceTree = "<group>"; };
 		E2834D482A3E84C000767325 /* DiscountsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsTableViewCell.xib; sourceTree = "<group>"; };
 		E2834D4B2A3E890C00767325 /* DiscountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsViewModel.swift; sourceTree = "<group>"; };
+		E2D65C352A3F5AEE0093AFBB /* InventoryLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLevel.swift; sourceTree = "<group>"; };
+		E2D65C372A3F62BC0093AFBB /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
 		E2FE45E82A3223410051B27A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E2FE45EA2A32235D0051B27A /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		E2FE45EC2A32238A0051B27A /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 		E25A87C22A2CD83B00AE2748 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2D65C342A3F5AD80093AFBB /* Inventory */,
 				E2834D412A3E844E00767325 /* SmartCollectionsModel */,
 				E2834D402A3E842600767325 /* ProductModelClasses */,
 				E2834D3B2A3E834500767325 /* DiscountModelClasses */,
@@ -479,6 +484,15 @@
 				E2834D4B2A3E890C00767325 /* DiscountsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2D65C342A3F5AD80093AFBB /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				E2D65C352A3F5AEE0093AFBB /* InventoryLevel.swift */,
+				E2D65C372A3F62BC0093AFBB /* InventoryItem.swift */,
+			);
+			path = Inventory;
 			sourceTree = "<group>";
 		};
 		E2FE45F42A322CB90051B27A /* CollectionProducts */ = {
@@ -728,6 +742,8 @@
 				617457E52A2930F7001134E7 /* SceneDelegate.swift in Sources */,
 				E2834D332A3E173100767325 /* PriceRuleViewModel.swift in Sources */,
 				E2834D092A39F3BC00767325 /* AddProductViewController.swift in Sources */,
+				E2D65C382A3F62BC0093AFBB /* InventoryItem.swift in Sources */,
+				E2D65C362A3F5AEE0093AFBB /* InventoryLevel.swift in Sources */,
 				E2FE45FA2A322D940051B27A /* ProductsTableViewCell.swift in Sources */,
 				E2834D232A3DEF1C00767325 /* PriceRule.swift in Sources */,
 				E2834D122A3B04FB00767325 /* navigation.swift in Sources */,

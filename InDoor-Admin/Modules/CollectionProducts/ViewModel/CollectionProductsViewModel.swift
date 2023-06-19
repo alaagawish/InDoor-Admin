@@ -27,4 +27,9 @@ class CollectionProductsViewModel{
             completionHandler((response?.product)!)
         }
     }
+    
+    func deleteProduct(product: Product) {
+        let url = "\(Constants.rootUrl)/\(Constants.urlQueryProducts)/\(product.id!)\(Constants.urlExtension)"
+        network.handleProduct(method: .delete, parameters: Converter.encodeToJson(objectClass: product)!, url: url) { (_:RootClass?) in}
+    }
 }

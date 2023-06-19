@@ -17,12 +17,12 @@ class AllProductsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadIndicator()
         setupNibCell()
         addProductButton.giveShadowAndRadius(shadowRadius: 7, cornerRadius: 25)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        loadIndicator()
         getProducts()
     }
     

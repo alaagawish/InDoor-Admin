@@ -95,7 +95,7 @@ extension ProductDetailsViewController {
         let variantQuantity = addVariantQuantityTextField.text
         let variantSize = addVariantSizeTextField.text!
         let variantColor = addVariantColorTextField.text!
-        let variant = Variants(id: nil, productId: product.id, title: variantName, price:variantPrice , sku: nil, position: nil, inventoryPolicy: nil, compareAtPrice: nil, fulfillmentService: nil, inventoryManagement: nil, option1: variantSize, option2: variantColor, option3: nil, createdAt: nil, updatedAt: nil, taxable: nil, barcode: nil, grams: nil, imageId: nil, weight: nil, weightUnit: nil, inventoryItemId: nil, inventoryQuantity: Int(variantQuantity ?? "0"), oldInventoryQuantity: Int(variantQuantity ?? "0"), requiresShipping: nil, adminGraphqlApiId: nil)
+        let variant = Variants(id: nil, productId: product.id, title: variantName, price:variantPrice, inventoryManagement: "shopify",  option1: variantSize, option2: variantColor, inventoryQuantity: Int(variantQuantity ?? "0"), oldInventoryQuantity: Int(variantQuantity ?? "0"))
         product.variants?.append(variant)
     }
     
