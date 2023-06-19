@@ -13,8 +13,10 @@
 		617457EA2A2930F7001134E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617457E82A2930F7001134E7 /* Main.storyboard */; };
 		617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617457EB2A2930F8001134E7 /* Assets.xcassets */; };
 		617457EF2A2930F8001134E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617457ED2A2930F8001134E7 /* LaunchScreen.storyboard */; };
+		E21E6F942A40904F00BDD927 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = E21E6F932A40904F00BDD927 /* welcome.json */; };
 		E25A87B92A2CBD0800AE2748 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */; };
 		E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */; };
+		E2773D592A408CC90029CFA8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */; };
 		E2834CEE2A38AB1B00767325 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CED2A38AB1B00767325 /* Extensions.swift */; };
 		E2834CF12A3905E800767325 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CF02A3905E800767325 /* ProductDetailsViewModel.swift */; };
 		E2834CF32A39066B00767325 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CF22A39066B00767325 /* Converter.swift */; };
@@ -90,8 +92,10 @@
 		617457EE2A2930F8001134E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		617457F02A2930F8001134E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E88968C0CB77FE533577E5 /* Pods-InDoor-Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InDoor-Admin.release.xcconfig"; path = "Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin.release.xcconfig"; sourceTree = "<group>"; };
+		E21E6F932A40904F00BDD927 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCollectionViewCell.xib; sourceTree = "<group>"; };
+		E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E2834CED2A38AB1B00767325 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E2834CF02A3905E800767325 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		E2834CF22A39066B00767325 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 		E25A87BB2A2CD59D00AE2748 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E2773D562A408C940029CFA8 /* LaunchScreen */,
 				E2834D422A3E847200767325 /* Discounts */,
 				E2834D282A3DF11900767325 /* PriceRule */,
 				E2834D062A39F38F00767325 /* AddProduct */,
@@ -274,9 +279,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E2773D562A408C940029CFA8 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E2773D572A408C9E0029CFA8 /* View */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		E2773D572A408C9E0029CFA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E2834CEC2A38AB0500767325 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E21E6F932A40904F00BDD927 /* welcome.json */,
 				E2834D132A3BCBEA00767325 /* done.json */,
 				E2834CED2A38AB1B00767325 /* Extensions.swift */,
 				E2834CF22A39066B00767325 /* Converter.swift */,
@@ -644,6 +666,7 @@
 				617457EF2A2930F8001134E7 /* LaunchScreen.storyboard in Resources */,
 				E2834D142A3BCBEB00767325 /* done.json in Resources */,
 				E2834D4A2A3E84C000767325 /* DiscountsTableViewCell.xib in Resources */,
+				E21E6F942A40904F00BDD927 /* welcome.json in Resources */,
 				617457EC2A2930F8001134E7 /* Assets.xcassets in Resources */,
 				E2FE45FB2A322D940051B27A /* ProductsTableViewCell.xib in Resources */,
 				E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */,
@@ -759,6 +782,7 @@
 				E2FE465A2A34A8E60051B27A /* ColorCollectionViewCell.swift in Sources */,
 				E2834CF92A3927F900767325 /* editImages.swift in Sources */,
 				E2834D492A3E84C000767325 /* DiscountsTableViewCell.swift in Sources */,
+				E2773D592A408CC90029CFA8 /* LaunchScreenViewController.swift in Sources */,
 				E2834D222A3DEF1C00767325 /* PrerequisiteSubtotalRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

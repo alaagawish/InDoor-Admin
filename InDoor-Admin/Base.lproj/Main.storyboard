@@ -14,7 +14,7 @@
         <!--Brands-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InDoor_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="ViewController" customModule="InDoor_Admin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1896,6 +1896,49 @@
             </objects>
             <point key="canvasLocation" x="3609.9236641221373" y="-4.2253521126760569"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="iZT-vl-ZUm">
+            <objects>
+                <viewController id="wVE-Hs-bfG" customClass="LaunchScreenViewController" customModule="InDoor_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNr-r8-6Gg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ps-BB-NV1" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="welcome"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-5j-cA8">
+                                <rect key="frame" x="130.66666666666666" y="460.66666666666669" width="120" height="101.33333333333331"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zLO-zr-DRA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tSv-5j-cA8" firstAttribute="centerX" secondItem="xNr-r8-6Gg" secondAttribute="centerX" multiplier="0.97" id="Cbb-iS-Ljq"/>
+                            <constraint firstItem="8ps-BB-NV1" firstAttribute="top" secondItem="zLO-zr-DRA" secondAttribute="top" id="Rp6-Rx-h2z"/>
+                            <constraint firstItem="8ps-BB-NV1" firstAttribute="leading" secondItem="zLO-zr-DRA" secondAttribute="leading" id="eyC-oR-HEg"/>
+                            <constraint firstItem="zLO-zr-DRA" firstAttribute="trailing" secondItem="8ps-BB-NV1" secondAttribute="trailing" id="gPj-cf-GAa"/>
+                            <constraint firstItem="tSv-5j-cA8" firstAttribute="centerY" secondItem="xNr-r8-6Gg" secondAttribute="centerY" multiplier="1.2" id="nJE-Me-sU1"/>
+                            <constraint firstItem="zLO-zr-DRA" firstAttribute="bottom" secondItem="8ps-BB-NV1" secondAttribute="bottom" id="xG8-63-tav"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lW4-ma-hjy"/>
+                    <connections>
+                        <outlet property="adminLabel" destination="tSv-5j-cA8" id="iBv-k5-S64"/>
+                        <outlet property="startAnimation" destination="8ps-BB-NV1" id="9NM-M2-WLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6i-kI-DD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="-5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Owq-9M-K6W">
             <objects>
@@ -1907,17 +1950,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Q1e-Kd-ULX" kind="relationship" relationship="rootViewController" id="5Ea-s5-TAu"/>
+                        <segue destination="wVE-Hs-bfG" kind="relationship" relationship="rootViewController" id="F9U-wB-Tqh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6P-9y-b78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.885496183206101" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-468" y="-4"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FfV-PI-Bes">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Q1e-Kd-ULX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="Q1e-Kd-ULX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="qn8-H6-eQL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZIF-2V-dP8">
@@ -1939,7 +1982,11 @@
     </scenes>
     <designables>
         <designable name="B20-Nh-jeI"/>
+        <designable name="GoJ-UM-L3l">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
         <designable name="kSl-Kw-9xs"/>
+        <designable name="rz3-9G-mri"/>
     </designables>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
