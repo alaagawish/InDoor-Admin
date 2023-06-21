@@ -9,10 +9,13 @@ import UIKit
 
 class AllProductsViewController: UIViewController {
 
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var addProductButton: UIButton!
     @IBOutlet weak var allProductsTable: UITableView!
     var allProductsViewModel = AllProductsViewModel(network: ApiHandler())
     var products:[Product] = []
+    var filteredProducts:[Product] = []
+    var searching = false
     var networkIndicator:UIActivityIndicatorView!
 
     override func viewDidLoad() {
@@ -23,6 +26,9 @@ class AllProductsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         loadIndicator()
+        searchTextField.text = ""
+        searchTextField.layer.cornerRadius = 20
+        searching = false
         getProducts()
     }
     
@@ -46,6 +52,21 @@ class AllProductsViewController: UIViewController {
         })
     }
     
+    @IBAction func typingASearchWord(_ sender: Any) {
+        if searchTextField.text! == "" {
+            searching = false
+            allProductsTable.reloadData()
+        }else{
+            searching = true
+            filteredProducts = []
+            for product in products {
+                if product.title!.contains(searchTextField.text!){
+                    filteredProducts.append(product)
+                }
+            }
+            allProductsTable.reloadData()
+        }
+    }
     @IBAction func goToAddProductPage(_ sender: Any) {
         let addProductVC = self.storyboard?.instantiateViewController(withIdentifier: "addProduct") as! AddProductViewController
         addProductVC.allProducts = products
@@ -56,12 +77,20 @@ class AllProductsViewController: UIViewController {
 extension AllProductsViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        if searching {
+            return filteredProducts.count
+        }else{
+            return products.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AllProductsConstants.cellName) as! ProductsTableViewCell
-        cell.setProductData(product: products[indexPath.row])
+        if searching {
+            cell.setProductData(product: filteredProducts[indexPath.row])
+        }else{
+            cell.setProductData(product: products[indexPath.row])
+        }
         return cell
     }
     
@@ -71,7 +100,11 @@ extension AllProductsViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let productDetailsVC = self.storyboard?.instantiateViewController(identifier:AllProductsConstants.detailsScreenName) as! ProductDetailsViewController
-        productDetailsVC.product = products[indexPath.row]
+        if searching {
+            productDetailsVC.product = filteredProducts[indexPath.row]
+        }else{
+            productDetailsVC.product = products[indexPath.row]
+        }
         productDetailsVC.newProduct = false
         self.navigationController?.pushViewController(productDetailsVC, animated: true)
     }
@@ -79,13 +112,25 @@ extension AllProductsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let alert = UIAlertController(title: Constants.warning, message: Constants.confirmDeleteProduct, preferredStyle: .alert)
         let actionDelete = UIAlertAction(title: Constants.delete, style: .destructive) { _ in
-            self.allProductsViewModel.deleteProduct(product: self.products[indexPath.row])
-            self.products.remove(at: indexPath.row)
+            if self.searching {
+                self.allProductsViewModel.deleteProduct(product: self.filteredProducts[indexPath.row])
+                for productIndex in self.products.indices {
+                    if self.products[productIndex].id == self.filteredProducts[indexPath.row].id {
+                        self.products.remove(at: productIndex)
+                    }
+                }
+                self.filteredProducts.remove(at: indexPath.row)
+            }else{
+                self.allProductsViewModel.deleteProduct(product: self.products[indexPath.row])
+                self.products.remove(at: indexPath.row)
+            }
             self.allProductsTable.reloadData()
         }
+        
         let actionCancel = UIAlertAction(title: Constants.cancel, style: .cancel)
         alert.addAction(actionDelete)
         alert.addAction(actionCancel)

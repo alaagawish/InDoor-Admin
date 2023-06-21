@@ -89,7 +89,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-iJ-fo2">
-                                <rect key="frame" x="0.0" y="121" width="393" height="731"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="k2h-X6-v38" id="Ynu-I9-fD1"/>
@@ -113,18 +113,40 @@
                                     <action selector="goToAddProductPage:" destination="k2h-X6-v38" eventType="touchUpInside" id="crG-Xn-Tpt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUL-QH-g1F">
+                                <rect key="frame" x="16" y="113" width="361" height="34"/>
+                                <color key="backgroundColor" red="0.77597738049999998" green="0.77597738049999998" blue="0.77597738049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="typingASearchWord:" destination="k2h-X6-v38" eventType="editingChanged" id="sE8-Xx-Qd4"/>
+                                </connections>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R5O-YD-AOW">
+                                <rect key="frame" x="353" y="123.66666666666667" width="15" height="13.333333333333329"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Z4y-w2-L76"/>
+                                    <constraint firstAttribute="width" secondItem="R5O-YD-AOW" secondAttribute="height" multiplier="1:1" id="cRg-wb-LYy"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MEv-6k-uqb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="R5O-YD-AOW" firstAttribute="centerY" secondItem="EUL-QH-g1F" secondAttribute="centerY" id="4Bg-kc-5ge"/>
                             <constraint firstAttribute="bottom" secondItem="Ag1-iJ-fo2" secondAttribute="bottom" id="F1A-Pr-n3c"/>
                             <constraint firstItem="Ag1-iJ-fo2" firstAttribute="trailing" secondItem="MEv-6k-uqb" secondAttribute="trailing" id="H2L-6W-uZf"/>
+                            <constraint firstItem="EUL-QH-g1F" firstAttribute="leading" secondItem="MEv-6k-uqb" secondAttribute="leading" constant="16" id="Hht-Sz-qDQ"/>
                             <constraint firstItem="MEv-6k-uqb" firstAttribute="bottom" secondItem="Gl5-2q-3bb" secondAttribute="bottom" constant="16" id="L4I-AJ-IM3"/>
                             <constraint firstItem="Ag1-iJ-fo2" firstAttribute="leading" secondItem="MEv-6k-uqb" secondAttribute="leading" id="LVt-UO-0Ej"/>
                             <constraint firstItem="J95-WM-QNb" firstAttribute="top" secondItem="MEv-6k-uqb" secondAttribute="top" constant="16" id="N1j-WC-FXl"/>
                             <constraint firstItem="MEv-6k-uqb" firstAttribute="trailing" secondItem="Gl5-2q-3bb" secondAttribute="trailing" constant="16" id="PAj-TU-YGA"/>
+                            <constraint firstItem="EUL-QH-g1F" firstAttribute="top" secondItem="J95-WM-QNb" secondAttribute="bottom" constant="8" id="Tbf-sV-P2m"/>
                             <constraint firstItem="J95-WM-QNb" firstAttribute="leading" secondItem="MEv-6k-uqb" secondAttribute="leading" constant="16" id="ZgE-m2-hIe"/>
-                            <constraint firstItem="Ag1-iJ-fo2" firstAttribute="top" secondItem="J95-WM-QNb" secondAttribute="bottom" constant="16" id="gNN-77-tfl"/>
+                            <constraint firstItem="MEv-6k-uqb" firstAttribute="trailing" secondItem="EUL-QH-g1F" secondAttribute="trailing" constant="16" id="blw-PI-6jn"/>
+                            <constraint firstItem="Ag1-iJ-fo2" firstAttribute="top" secondItem="EUL-QH-g1F" secondAttribute="bottom" constant="8" id="gNN-77-tfl"/>
+                            <constraint firstItem="MEv-6k-uqb" firstAttribute="trailing" secondItem="R5O-YD-AOW" secondAttribute="trailing" constant="25" id="gbp-6E-OWk"/>
                             <constraint firstItem="Gl5-2q-3bb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MEv-6k-uqb" secondAttribute="leading" symbolic="YES" id="nr5-TM-mhK"/>
                             <constraint firstItem="MEv-6k-uqb" firstAttribute="trailing" secondItem="J95-WM-QNb" secondAttribute="trailing" constant="16" id="rTh-bw-L2i"/>
                         </constraints>
@@ -142,6 +164,7 @@
                     <connections>
                         <outlet property="addProductButton" destination="Gl5-2q-3bb" id="gFL-Hk-DZ1"/>
                         <outlet property="allProductsTable" destination="Ag1-iJ-fo2" id="4rv-nH-x6m"/>
+                        <outlet property="searchTextField" destination="EUL-QH-g1F" id="er9-XG-JCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRM-2K-FC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2065,14 +2088,6 @@
             <point key="canvasLocation" x="1035.8778625954199" y="-3.5211267605633805"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="B20-Nh-jeI"/>
-        <designable name="GoJ-UM-L3l">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-        <designable name="kSl-Kw-9xs"/>
-        <designable name="rz3-9G-mri"/>
-    </designables>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="104"/>
@@ -2081,6 +2096,7 @@
         <image name="exit" width="980" height="980"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="logo" width="1000" height="1125"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="tag" catalog="system" width="128" height="118"/>
         <image name="trash.fill" catalog="system" width="119" height="128"/>
