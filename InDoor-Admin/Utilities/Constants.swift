@@ -65,7 +65,7 @@ class Constants {
     static let wrongMinimumSubtotalNumber = "Please enter proper subtotal amount number"
     static let wrongPercentage = "Percentage can't be above 100"
     static let wrongDiscountToSubtotal = "Discount amount can't be more than the subtotal amount"
-    static let location = "83976225055"
+    static let location = "83976225055" 
     static let userName = "admin"
     static let password = "admin"
     static let user = "admin"

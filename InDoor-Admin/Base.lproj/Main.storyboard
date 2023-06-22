@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -63,7 +64,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Brands" image="brand" id="xY6-kw-GLL">
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" name="Pinkish"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="3di-P4-x9c"/>
                     <connections>
@@ -105,7 +106,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="fixed">
                                     <backgroundConfiguration key="background" cornerRadius="25">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Pinkish"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -154,12 +155,12 @@
                     <tabBarItem key="tabBarItem" title="All products" id="gi5-nb-cQ2">
                         <imageReference key="image" image="list.bullet" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color systemColor="labelColor"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color systemColor="tertiaryLabelColor"/>
+                                <color name="Pinkish"/>
+                                <color name="Pinkish"/>
+                                <color name="Pinkish"/>
                             </hierarchicalColors>
                         </imageReference>
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" name="Pinkish"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="addProductButton" destination="Gl5-2q-3bb" id="gFL-Hk-DZ1"/>
@@ -458,7 +459,7 @@
                                     <outlet property="delegate" destination="T8s-J3-CcM" id="R3w-nG-E0m"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Pfl-DW-6Yh">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackBtn" translatesAutoresizingMaskIntoConstraints="NO" id="Pfl-DW-6Yh">
                                 <rect key="frame" x="16" y="67" width="40" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -477,7 +478,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="fixed">
                                     <backgroundConfiguration key="background" cornerRadius="25">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Pinkish"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -514,7 +515,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -625,7 +626,7 @@
                                     <outlet property="delegate" destination="J5I-p2-aCa" id="j5X-lK-mJM"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-Wx-6a9">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackBtn" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-Wx-6a9">
                                 <rect key="frame" x="8" y="59" width="39.333333333333336" height="39.333333333333343"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -644,7 +645,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="fixed">
                                     <backgroundConfiguration key="background" cornerRadius="25">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Pinkish"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -692,7 +693,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="YtK-1h-SIf">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackBtn" translatesAutoresizingMaskIntoConstraints="NO" id="YtK-1h-SIf">
                                 <rect key="frame" x="16" y="75" width="40" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -718,7 +719,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.fill" catalog="system" cornerStyle="fixed">
                                     <backgroundConfiguration key="background" cornerRadius="25">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Pinkish"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -735,7 +736,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward.fill" catalog="system" cornerStyle="fixed">
                                     <backgroundConfiguration key="background" cornerRadius="25">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Pinkish"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -862,7 +863,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show Image" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -875,7 +876,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Save Image" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -962,7 +963,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Save variant" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1093,7 +1094,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="+" cornerStyle="fixed">
                                                     <backgroundConfiguration key="background" cornerRadius="20">
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="Pinkish"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1128,7 +1129,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="pencil.line" catalog="system">
-                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" name="Pinkish"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="editTitleAndVendor:" destination="wAT-qw-SnO" eventType="touchUpInside" id="pvK-XN-7AB"/>
@@ -1270,7 +1271,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="pencil.line" catalog="system">
-                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" name="Pinkish"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="editPrice:" destination="wAT-qw-SnO" eventType="touchUpInside" id="6Xz-Jp-Yh4"/>
@@ -1283,7 +1284,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="pencil.line" catalog="system">
-                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" name="Pinkish"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="editQuantity:" destination="wAT-qw-SnO" eventType="touchUpInside" id="Dgf-gq-C7B"/>
@@ -1315,7 +1316,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="pencil.line" catalog="system">
-                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" name="Pinkish"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="editDescription:" destination="wAT-qw-SnO" eventType="touchUpInside" id="pSe-fg-Tit"/>
@@ -1326,7 +1327,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Add Variant" cornerStyle="fixed">
                                                     <backgroundConfiguration key="background" cornerRadius="10">
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="Pinkish"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1423,7 +1424,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save Product" cornerStyle="fixed">
                                     <backgroundConfiguration key="background" cornerRadius="10">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Pinkish"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -1431,7 +1432,7 @@
                                     <action selector="saveProduct:" destination="wAT-qw-SnO" eventType="touchUpInside" id="hDT-R3-IIb"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="nP2-NT-EOm">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackBtn" translatesAutoresizingMaskIntoConstraints="NO" id="nP2-NT-EOm">
                                 <rect key="frame" x="16" y="59" width="40" height="40"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1467,7 +1468,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1561,7 +1562,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1653,7 +1654,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Done" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1747,7 +1748,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show Image" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1760,7 +1761,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Save Image" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1778,7 +1779,7 @@
                                         <buttonConfiguration key="configuration" style="plain" cornerStyle="fixed">
                                             <imageReference key="image" image="trash.fill" catalog="system" symbolScale="small"/>
                                             <backgroundConfiguration key="background" cornerRadius="20">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -1931,7 +1932,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="welcome"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="splash"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-5j-cA8">
@@ -1943,7 +1944,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5C-Gg-Mif">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0gG-h1-NY3">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPink" translatesAutoresizingMaskIntoConstraints="NO" id="0gG-h1-NY3">
                                         <rect key="frame" x="0.0" y="40" width="393" height="379.66666666666669"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc3-sW-tC0">
@@ -1978,7 +1979,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login" cornerStyle="fixed">
                                             <backgroundConfiguration key="background" cornerRadius="10">
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Pinkish"/>
                                             </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2074,8 +2075,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZIF-2V-dP8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Pinkish"/>
+                        <color key="selectedImageTintColor" name="Pinkish"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9Pv-ma-dLf"/>
@@ -2088,26 +2089,35 @@
             <point key="canvasLocation" x="1035.8778625954199" y="-3.5211267605633805"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8ps-BB-NV1"/>
+        <designable name="B20-Nh-jeI"/>
+        <designable name="GoJ-UM-L3l">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+        <designable name="kSl-Kw-9xs"/>
+        <designable name="rz3-9G-mri"/>
+    </designables>
     <resources>
+        <image name="BackBtn" width="512" height="512"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="104"/>
-        <image name="back" width="200" height="200"/>
         <image name="brand" width="30" height="30"/>
         <image name="exit" width="980" height="980"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
-        <image name="logo" width="1000" height="1125"/>
+        <image name="logoPink" width="2000" height="2250"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="tag" catalog="system" width="128" height="118"/>
         <image name="trash.fill" catalog="system" width="119" height="128"/>
+        <namedColor name="Pinkish">
+            <color red="0.77254901960784317" green="0.21176470588235294" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
