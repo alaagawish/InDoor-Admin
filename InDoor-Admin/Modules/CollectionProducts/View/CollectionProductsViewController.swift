@@ -24,11 +24,11 @@ class CollectionProductsViewController: UIViewController {
     var brand:SmartCollections!
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadIndicator()
         setupNibCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        loadIndicator()
         getProducts()
     }
     

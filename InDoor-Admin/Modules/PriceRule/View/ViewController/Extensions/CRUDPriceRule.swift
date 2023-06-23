@@ -67,7 +67,7 @@ extension PriceRuleViewController {
             return false
         }
         if typeSegmentedControl.selectedSegmentIndex == 0{
-            if Int(disountAmountTextField.text!)! > 100 {
+            if Double(disountAmountTextField.text!)! > 100 {
                 InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.wrongPercentage)
                 return false
             }else{

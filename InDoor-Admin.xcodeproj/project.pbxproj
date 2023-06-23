@@ -16,6 +16,7 @@
 		E21E6F942A40904F00BDD927 /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = E21E6F932A40904F00BDD927 /* welcome.json */; };
 		E25A87B92A2CBD0800AE2748 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */; };
 		E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */; };
+		E27435662A45EB41000ADED8 /* InDoor_AdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27435652A45EB41000ADED8 /* InDoor_AdminTests.swift */; };
 		E2773D592A408CC90029CFA8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */; };
 		E2834CEE2A38AB1B00767325 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CED2A38AB1B00767325 /* Extensions.swift */; };
 		E2834CF12A3905E800767325 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CF02A3905E800767325 /* ProductDetailsViewModel.swift */; };
@@ -82,6 +83,16 @@
 		FDB3AD3838E36D86168865D6 /* Pods_InDoor_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F0D83FD0C2B26A4B64AEA1 /* Pods_InDoor_Admin.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E27435672A45EB41000ADED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 617457D72A2930F7001134E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 617457DE2A2930F7001134E7;
+			remoteInfo = "InDoor-Admin";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		54CC08E1F256AE805EFF8E2F /* Pods-InDoor-Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InDoor-Admin.debug.xcconfig"; path = "Target Support Files/Pods-InDoor-Admin/Pods-InDoor-Admin.debug.xcconfig"; sourceTree = "<group>"; };
 		617457DF2A2930F7001134E7 /* InDoor-Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InDoor-Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +107,8 @@
 		E21E6F932A40904F00BDD927 /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCollectionViewCell.xib; sourceTree = "<group>"; };
+		E27435632A45EB41000ADED8 /* InDoor-AdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InDoor-AdminTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27435652A45EB41000ADED8 /* InDoor_AdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InDoor_AdminTests.swift; sourceTree = "<group>"; };
 		E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E2834CED2A38AB1B00767325 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E2834CF02A3905E800767325 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -171,6 +184,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E27435602A45EB41000ADED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -178,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				617457E12A2930F7001134E7 /* InDoor-Admin */,
+				E27435642A45EB41000ADED8 /* InDoor-AdminTests */,
 				617457E02A2930F7001134E7 /* Products */,
 				C22C4196AAFC8276CADFDEF5 /* Pods */,
 				F2CA09F3974E7B53C955360A /* Frameworks */,
@@ -188,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				617457DF2A2930F7001134E7 /* InDoor-Admin.app */,
+				E27435632A45EB41000ADED8 /* InDoor-AdminTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +301,14 @@
 				E2FE45EE2A32238A0051B27A /* RootClass.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E27435642A45EB41000ADED8 /* InDoor-AdminTests */ = {
+			isa = PBXGroup;
+			children = (
+				E27435652A45EB41000ADED8 /* InDoor_AdminTests.swift */,
+			);
+			path = "InDoor-AdminTests";
 			sourceTree = "<group>";
 		};
 		E2773D562A408C940029CFA8 /* LaunchScreen */ = {
@@ -625,6 +655,24 @@
 			productReference = 617457DF2A2930F7001134E7 /* InDoor-Admin.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E27435622A45EB41000ADED8 /* InDoor-AdminTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E274356B2A45EB41000ADED8 /* Build configuration list for PBXNativeTarget "InDoor-AdminTests" */;
+			buildPhases = (
+				E274355F2A45EB41000ADED8 /* Sources */,
+				E27435602A45EB41000ADED8 /* Frameworks */,
+				E27435612A45EB41000ADED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E27435682A45EB41000ADED8 /* PBXTargetDependency */,
+			);
+			name = "InDoor-AdminTests";
+			productName = "InDoor-AdminTests";
+			productReference = E27435632A45EB41000ADED8 /* InDoor-AdminTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -632,11 +680,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					617457DE2A2930F7001134E7 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					E27435622A45EB41000ADED8 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 617457DE2A2930F7001134E7;
 					};
 				};
 			};
@@ -657,6 +709,7 @@
 			projectRoot = "";
 			targets = (
 				617457DE2A2930F7001134E7 /* InDoor-Admin */,
+				E27435622A45EB41000ADED8 /* InDoor-AdminTests */,
 			);
 		};
 /* End PBXProject section */
@@ -676,6 +729,13 @@
 				E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */,
 				E2834D312A3E021C00767325 /* PriceRuleTableViewCell.xib in Resources */,
 				617457EA2A2930F7001134E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E27435612A45EB41000ADED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,7 +851,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E274355F2A45EB41000ADED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E27435662A45EB41000ADED8 /* InDoor_AdminTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E27435682A45EB41000ADED8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 617457DE2A2930F7001134E7 /* InDoor-Admin */;
+			targetProxy = E27435672A45EB41000ADED8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		617457E82A2930F7001134E7 /* Main.storyboard */ = {
@@ -983,6 +1059,48 @@
 			};
 			name = Release;
 		};
+		E27435692A45EB41000ADED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AHMED.InDoor-AdminTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InDoor-Admin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InDoor-Admin";
+			};
+			name = Debug;
+		};
+		E274356A2A45EB41000ADED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "AHMED.InDoor-AdminTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InDoor-Admin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InDoor-Admin";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1000,6 +1118,15 @@
 			buildConfigurations = (
 				617457F42A2930F8001134E7 /* Debug */,
 				617457F52A2930F8001134E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E274356B2A45EB41000ADED8 /* Build configuration list for PBXNativeTarget "InDoor-AdminTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E27435692A45EB41000ADED8 /* Debug */,
+				E274356A2A45EB41000ADED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
