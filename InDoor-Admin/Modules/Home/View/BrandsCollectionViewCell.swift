@@ -27,7 +27,7 @@ class BrandsCollectionViewCell: UICollectionViewCell {
     }
     
     func setBrandData(brand:SmartCollections){
-        brandImage.kf.setImage(with: URL(string: brand.image.src ?? ""))
+        brandImage.kf.setImage(with: URL(string: brand.image?.src ?? ""))
         brandName.text = brand.title
     }
 }

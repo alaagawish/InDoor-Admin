@@ -16,9 +16,9 @@ class PriceRuleTableViewCell: UITableViewCell {
     @IBOutlet weak var ruleTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.shadowRadius = 5.0
+        layer.shadowRadius = 3.0
         layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: 3.3, height: 5.7)
+        layer.shadowOffset = .zero
         layer.shadowOpacity = 0.7
         layer.masksToBounds = false
         contentView.layer.cornerRadius = 20

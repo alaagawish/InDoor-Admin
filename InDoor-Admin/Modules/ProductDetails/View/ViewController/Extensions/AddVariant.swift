@@ -38,7 +38,7 @@ extension ProductDetailsViewController {
     }
     
     @IBAction func doneAddingVariant(_ sender: Any) {
-        let variantName = "\(addVariantSizeTextField.text!) / \(addVariantColorTextField.text!)"
+        let variantName = "\(addVariantSizeTextField.text!) / \(addVariantColorTextField.text!.lowercased())"
         if checkForEmptyFields() {
             InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.emptyFields)
         }else if checkFieldsValidity(){
@@ -83,7 +83,7 @@ extension ProductDetailsViewController {
     
     func checkDuplicatedVariant(variantName: String) -> Bool {
         for variant in product.variants! {
-            if variant.title == variantName {
+            if variant.title?.lowercased() == variantName {
                 return true
             }
         }

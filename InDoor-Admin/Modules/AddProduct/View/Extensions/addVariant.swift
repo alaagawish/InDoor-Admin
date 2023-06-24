@@ -100,7 +100,7 @@ extension AddProductViewController {
     
     func checkVariantIsGenuine() -> Bool {
         for variant in product.variants! {
-            if variant.title == "\(sizeTextField.text!) / \(colorTextField.text!)" {
+            if variant.title?.lowercased() == "\(sizeTextField.text!) / \(colorTextField.text!.lowercased())" {
                 return false
             }
         }
@@ -115,7 +115,11 @@ extension AddProductViewController {
             }
         }
         let actionDiscardAndContinue = UIAlertAction(title: Constants.discard, style: .destructive) { _ in
-            self.navigateToDetails()
+            if self.product.variants!.isEmpty{
+                InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.atLeastOneVariant)
+            }else{
+                self.navigateToDetails()
+            }
         }
         let cancelAction = UIAlertAction(title: Constants.cancel, style: .cancel)
         alert.addAction(actionSaveAndContinue)

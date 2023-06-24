@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +28,7 @@
                         </constraints>
                         <imageReference key="image" image="tag.fill" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color systemColor="labelColor"/>
+                                <color name="Pinkish"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
@@ -74,8 +75,8 @@
                         <imageReference key="image" image="dollarsign.circle.fill" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color name="Pinkish"/>
+                                <color name="Pinkish"/>
                             </hierarchicalColors>
                         </imageReference>
                     </imageView>
@@ -151,9 +152,9 @@
         <image name="max" width="503" height="439"/>
         <image name="start" width="767" height="998"/>
         <image name="tag.fill" catalog="system" width="128" height="118"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="Pinkish">
+            <color red="0.77254901960784317" green="0.21176470588235294" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

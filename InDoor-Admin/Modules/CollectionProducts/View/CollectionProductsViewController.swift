@@ -12,7 +12,7 @@ class CollectionProductsViewController: UIViewController {
     var responseCount:Int = .zero
     @IBOutlet weak var collectionProductsTable: UITableView!
     var collectionProductsViewModel = CollectionProductsViewModel(network: ApiHandler())
-    var networkIndicator: UIActivityIndicatorView!
+    var networkIndicator = UIActivityIndicatorView(style: .large)
     var products:[Product] = []{
         didSet{
             if products.count == responseCount{
@@ -28,12 +28,12 @@ class CollectionProductsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        products = []
         loadIndicator()
         getProducts()
     }
     
     func loadIndicator(){
-        networkIndicator = UIActivityIndicatorView(style: .large)
         networkIndicator.center = self.view.center
         self.view.addSubview(networkIndicator)
         networkIndicator.startAnimating()

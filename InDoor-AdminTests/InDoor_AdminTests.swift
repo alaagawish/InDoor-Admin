@@ -6,29 +6,56 @@
 //
 
 import XCTest
+@testable import InDoor_Admin
 
 final class InDoor_AdminTests: XCTestCase {
 
+    var network: ApiService!
+    var fakeNetwork: ApiService!
+    var homeViewModel: HomeViewModel!
+    var collectionProductsViewModel: CollectionProductsViewModel!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        network = ApiHandler()
+        fakeNetwork = FakeNetwork()
+        homeViewModel = HomeViewModel(network: fakeNetwork)
+        collectionProductsViewModel = CollectionProductsViewModel(network: fakeNetwork)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        network = nil
+        fakeNetwork = nil
+        homeViewModel = nil
+        collectionProductsViewModel = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testRetrieveBrandsFromApi(){
+        let myEexpectaion = expectation(description: "Waiting for Api Response")
+        let url = "https://mad43-sv-ios1.myshopify.com/admin/api/2023-04/smart_collections.json"
+        network.handleProduct(method: .get, parameters: [:], url: url) { (allBrands:RootClass?) in
+            guard let brandContainer = allBrands else {
+                XCTFail("response came back nil")
+                return
+            }
+            XCTAssertNotNil(brandContainer,"Network Responded With nil")
+            XCTAssertTrue(brandContainer.smartCollections!.count>0)
+            XCTAssertFalse(brandContainer.smartCollections?[0].id == nil)
+            myEexpectaion.fulfill()
+        }
+        waitForExpectations(timeout: 5)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    func testHomeViewModelDataRetrieval(){
+        homeViewModel.getAvailableBrands {(brands) in
+            XCTAssertNotNil(brands,"Network Responded With nil")
+            XCTAssertTrue(brands[0].id == 1)
+        }
+    }
+    
+    func testCollectionProductsDataRetrieval(){
+        collectionProductsViewModel.getPrdouctsOfSpecificBrand(brandID: "") { products in
+            XCTAssertNotNil(products,"Network Responded With nil")
+            XCTAssertTrue(products[0].title == "ADIDAS")
         }
     }
 

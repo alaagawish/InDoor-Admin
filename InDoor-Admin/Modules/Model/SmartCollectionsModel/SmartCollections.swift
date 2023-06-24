@@ -9,18 +9,18 @@ import Foundation
 struct SmartCollections: Codable {
 
     var id: Int
-    var handle: String
-    var title: String
-    var updatedAt: String
-    var bodyHtml: String
-    var publishedAt: String
-    var sortOrder: String
+    var handle: String?
+    var title: String?
+    var updatedAt: String?
+    var bodyHtml: String?
+    var publishedAt: String?
+    var sortOrder: String?
     var templateSuffix: String?
-    var disjunctive: Bool
-    var rules: [Rules]
-    var publishedScope: String
-    var adminGraphqlApiId: String
-    var image: Image
+    var disjunctive: Bool?
+    var rules: [Rules]?
+    var publishedScope: String?
+    var adminGraphqlApiId: String?
+    var image: Image?
 
 	private enum CodingKeys: String, CodingKey {
 		case id = "id"

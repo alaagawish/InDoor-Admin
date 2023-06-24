@@ -28,6 +28,7 @@ extension AddProductViewController {
     @IBAction func addImage(_ sender: Any) {
         if saveProductImage(){
             addImageUrlTextField.text = ""
+            addImageImageView.kf.setImage(with: URL(string: ""))
         }
     }
     
@@ -81,11 +82,16 @@ extension AddProductViewController {
     func showImageHandlingAlert(){
         let alert = UIAlertController(title: Constants.warning, message: Constants.imageHandlingQuery, preferredStyle: .alert)
         let actionSaveAndContinue = UIAlertAction(title: Constants.save, style: .default) { _ in
-            self.product.images?.append(Image(src: self.addImageUrlTextField.text))
-            self.moveToVariantPage()
+            if self.saveProductImage(){
+                self.moveToVariantPage()
+            }
         }
         let actionDiscardAndContinue = UIAlertAction(title: Constants.discard, style: .destructive) { _ in
-            self.moveToVariantPage()
+            if self.product.images!.isEmpty{
+                InstructionAlert.presentAlert(vc: self, title: Constants.error, message: Constants.atLeastOneImage)
+            }else{
+                self.moveToVariantPage()
+            }
         }
         let cancelAction = UIAlertAction(title: Constants.cancel, style: .cancel)
         alert.addAction(actionSaveAndContinue)

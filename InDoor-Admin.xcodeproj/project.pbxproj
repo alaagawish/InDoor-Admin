@@ -17,6 +17,7 @@
 		E25A87B92A2CBD0800AE2748 /* BrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A87B72A2CBD0800AE2748 /* BrandsCollectionViewCell.swift */; };
 		E25A87BA2A2CBD0800AE2748 /* BrandsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */; };
 		E27435662A45EB41000ADED8 /* InDoor_AdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27435652A45EB41000ADED8 /* InDoor_AdminTests.swift */; };
+		E274358D2A45F8AC000ADED8 /* FakeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E274358C2A45F8AC000ADED8 /* FakeNetwork.swift */; };
 		E2773D592A408CC90029CFA8 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */; };
 		E2834CEE2A38AB1B00767325 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CED2A38AB1B00767325 /* Extensions.swift */; };
 		E2834CF12A3905E800767325 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2834CF02A3905E800767325 /* ProductDetailsViewModel.swift */; };
@@ -109,6 +110,7 @@
 		E25A87B82A2CBD0800AE2748 /* BrandsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCollectionViewCell.xib; sourceTree = "<group>"; };
 		E27435632A45EB41000ADED8 /* InDoor-AdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InDoor-AdminTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27435652A45EB41000ADED8 /* InDoor_AdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InDoor_AdminTests.swift; sourceTree = "<group>"; };
+		E274358C2A45F8AC000ADED8 /* FakeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetwork.swift; sourceTree = "<group>"; };
 		E2773D582A408CC90029CFA8 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E2834CED2A38AB1B00767325 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E2834CF02A3905E800767325 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				E27435652A45EB41000ADED8 /* InDoor_AdminTests.swift */,
+				E274358C2A45F8AC000ADED8 /* FakeNetwork.swift */,
 			);
 			path = "InDoor-AdminTests";
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27435662A45EB41000ADED8 /* InDoor_AdminTests.swift in Sources */,
+				E274358D2A45F8AC000ADED8 /* FakeNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

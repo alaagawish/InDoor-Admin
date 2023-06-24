@@ -11,10 +11,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var brandsCollection: UICollectionView!
     var homeViewModel = HomeViewModel(network: ApiHandler())
+    var networkIndicator:UIActivityIndicatorView!
     var brands:[SmartCollections] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNibCell()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadIndicator()
         getBrands()
     }
     
@@ -23,10 +28,18 @@ class ViewController: UIViewController {
         brandsCollection.register(nib, forCellWithReuseIdentifier: Constants.cellName)
     }
     
+    func loadIndicator(){
+        networkIndicator = UIActivityIndicatorView(style: .large)
+        networkIndicator.center = self.view.center
+        self.view.addSubview(networkIndicator)
+        networkIndicator.startAnimating()
+    }
+    
     func getBrands(){
         homeViewModel.getAvailableBrands { [weak self] brandArr in
             self?.brands = brandArr
             self?.brandsCollection.reloadData()
+            self?.networkIndicator.stopAnimating()
         }
     }
 }
