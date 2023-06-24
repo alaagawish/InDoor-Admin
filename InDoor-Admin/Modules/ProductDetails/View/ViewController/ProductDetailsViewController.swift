@@ -101,7 +101,7 @@ class ProductDetailsViewController: UIViewController, ImageSlideshowDelegate {
     
     func initializeUI(){
         saveProductButton.giveShadowAndRadius(shadowRadius: 10, cornerRadius: 10)
-        rating.rating = Double(product.templateSuffix ?? "1.5") ?? 1.5
+        rating.rating = Double(product.templateSuffix ?? "0.0") ?? 0.0
         prepareSizeCollection()
         prepareColorCollection()
         startSlider()
